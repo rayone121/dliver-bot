@@ -1,9 +1,1 @@
-# Created by venv; see https://docs.python.org/3/library/venv.html
-.env/
-./bin/
-./lib/
-./include/
-./share/
-.pyvenv.cfg
-./src/WHATSAPP_Webhook_Server/node_modules
 
