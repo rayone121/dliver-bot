@@ -1,0 +1,864 @@
+Received SMS from: 40774463442 at 2025-03-07T15:46:24.954Z with message: Test message
+Initialized state for new user 40774463442
+Set session timeout and reminder timeout for 40774463442
+Verifying device connection...
+Device connection verified
+formatted message: Pentru a incepe, va rugam sa trimiteti un mesaj cu /start.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+User 40774463442 sent invalid start message
+Error from WhatsApp API: {"message":"Request failed with status code 401","name":"AxiosError","stack":"AxiosError: Request failed with status code 401\n    at settle (file:///Users/raymond/Documents/Repos/dliver-bot/node_modules/axios/lib/core/settle.js:19:12)\n    at BrotliDecompress.handleStreamEnd (file:///Users/raymond/Documents/Repos/dliver-bot/node_modules/axios/lib/adapters/http.js:599:11)\n    at BrotliDecompress.emit (node:events:519:35)\n    at endReadableNT (node:internal/streams/readable:1696:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)\n    at Axios.request (file:///Users/raymond/Documents/Repos/dliver-bot/node_modules/axios/lib/core/Axios.js:45:41)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async checkWAPPConn (file:///Users/raymond/Documents/Repos/dliver-bot/src/utils/apiChecker.js:10:22)\n    at async checkAPIStatus (file:///Users/raymond/Documents/Repos/dliver-bot/src/server.js:45:18)","config":{"transitional":{"silentJSONParsing":true,"forcedJSONParsing":true,"clarifyTimeoutError":false},"adapter":["xhr","http","fetch"],"transformRequest":[null],"transformResponse":[null],"timeout":0,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN","maxContentLength":-1,"maxBodyLength":-1,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer EAANSE1RJzqsBO6gEO8h0v5M6cKSKvWWP48r5tVz6tZByi6vq9dVQTZAQrlfh8o7VFho0gbvJyN0fCgZBex15H3CNEEVwyz9Xo7Hrf0S30lBbs1Qa7wCXSiv3jZCnjF3Nnfqz93hbPsR6sugSsWXFYHxrcvSS35iztbX60QwwRCL1KVZBcvJtP9fssPmNF3caH5uM31NNfDxcZAkxZArNL2cOLTsdwcZD","User-Agent":"axios/1.8.1","Accept-Encoding":"gzip, compress, deflate, br"},"baseURL":"https://graph.facebook.com/v18.0","method":"get","url":"/me","allowAbsoluteUrls":true},"code":"ERR_BAD_REQUEST","status":401}
+Verifying device connection...
+Device connection verified
+formatted message: Your session will expire in 5 seconds. Please complete your interaction.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+Sent reminder message to 40774463442
+Received SMS from: 40774463442 at 2025-03-07T15:46:54.938Z with message: Test message
+Cleared existing session timeout for 40774463442
+Cleared existing reminder timeout for 40774463442
+Set session timeout and reminder timeout for 40774463442
+Verifying device connection...
+Device connection verified
+formatted message: Pentru a incepe, va rugam sa trimiteti un mesaj cu /start.
+Error from WhatsApp API: {"message":"Request failed with status code 401","name":"AxiosError","stack":"AxiosError: Request failed with status code 401\n    at settle (file:///Users/raymond/Documents/Repos/dliver-bot/node_modules/axios/lib/core/settle.js:19:12)\n    at BrotliDecompress.handleStreamEnd (file:///Users/raymond/Documents/Repos/dliver-bot/node_modules/axios/lib/adapters/http.js:599:11)\n    at BrotliDecompress.emit (node:events:519:35)\n    at endReadableNT (node:internal/streams/readable:1696:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)\n    at Axios.request (file:///Users/raymond/Documents/Repos/dliver-bot/node_modules/axios/lib/core/Axios.js:45:41)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async checkWAPPConn (file:///Users/raymond/Documents/Repos/dliver-bot/src/utils/apiChecker.js:10:22)\n    at async Timeout.checkAPIStatus [as _onTimeout] (file:///Users/raymond/Documents/Repos/dliver-bot/src/server.js:45:18)","config":{"transitional":{"silentJSONParsing":true,"forcedJSONParsing":true,"clarifyTimeoutError":false},"adapter":["xhr","http","fetch"],"transformRequest":[null],"transformResponse":[null],"timeout":0,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN","maxContentLength":-1,"maxBodyLength":-1,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer EAANSE1RJzqsBO6gEO8h0v5M6cKSKvWWP48r5tVz6tZByi6vq9dVQTZAQrlfh8o7VFho0gbvJyN0fCgZBex15H3CNEEVwyz9Xo7Hrf0S30lBbs1Qa7wCXSiv3jZCnjF3Nnfqz93hbPsR6sugSsWXFYHxrcvSS35iztbX60QwwRCL1KVZBcvJtP9fssPmNF3caH5uM31NNfDxcZAkxZArNL2cOLTsdwcZD","User-Agent":"axios/1.8.1","Accept-Encoding":"gzip, compress, deflate, br"},"baseURL":"https://graph.facebook.com/v18.0","method":"get","url":"/me","allowAbsoluteUrls":true},"code":"ERR_BAD_REQUEST","status":401}
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+User 40774463442 sent invalid start message
+Received SMS from: 40774463442 at 2025-03-07T15:49:06.179Z with message: Test message
+Initialized state for new user 40774463442
+Set session timeout and reminder timeout for 40774463442
+Verifying device connection...
+Device connection verified
+formatted message: Pentru a incepe, va rugam sa trimiteti un mesaj cu /start.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+User 40774463442 sent invalid start message
+Error from WhatsApp API: {"message":"Request failed with status code 401","name":"AxiosError","stack":"AxiosError: Request failed with status code 401\n    at settle (file:///Users/raymond/Documents/Repos/dliver-bot/node_modules/axios/lib/core/settle.js:19:12)\n    at BrotliDecompress.handleStreamEnd (file:///Users/raymond/Documents/Repos/dliver-bot/node_modules/axios/lib/adapters/http.js:599:11)\n    at BrotliDecompress.emit (node:events:519:35)\n    at endReadableNT (node:internal/streams/readable:1696:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)\n    at Axios.request (file:///Users/raymond/Documents/Repos/dliver-bot/node_modules/axios/lib/core/Axios.js:45:41)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async checkWAPPConn (file:///Users/raymond/Documents/Repos/dliver-bot/src/utils/apiChecker.js:10:22)\n    at async checkAPIStatus (file:///Users/raymond/Documents/Repos/dliver-bot/src/server.js:45:18)","config":{"transitional":{"silentJSONParsing":true,"forcedJSONParsing":true,"clarifyTimeoutError":false},"adapter":["xhr","http","fetch"],"transformRequest":[null],"transformResponse":[null],"timeout":0,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN","maxContentLength":-1,"maxBodyLength":-1,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer EAANSE1RJzqsBO6gEO8h0v5M6cKSKvWWP48r5tVz6tZByi6vq9dVQTZAQrlfh8o7VFho0gbvJyN0fCgZBex15H3CNEEVwyz9Xo7Hrf0S30lBbs1Qa7wCXSiv3jZCnjF3Nnfqz93hbPsR6sugSsWXFYHxrcvSS35iztbX60QwwRCL1KVZBcvJtP9fssPmNF3caH5uM31NNfDxcZAkxZArNL2cOLTsdwcZD","User-Agent":"axios/1.8.1","Accept-Encoding":"gzip, compress, deflate, br"},"baseURL":"https://graph.facebook.com/v18.0","method":"get","url":"/me","allowAbsoluteUrls":true},"code":"ERR_BAD_REQUEST","status":401}
+Received SMS from: 40774463442 at 2025-03-07T15:49:17.374Z with message: Test message
+Initialized state for new user 40774463442
+Set session timeout and reminder timeout for 40774463442
+Verifying device connection...
+Device connection verified
+formatted message: Pentru a incepe, va rugam sa trimiteti un mesaj cu /start.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+User 40774463442 sent invalid start message
+Error from WhatsApp API: {"message":"Request failed with status code 401","name":"AxiosError","stack":"AxiosError: Request failed with status code 401\n    at settle (file:///Users/raymond/Documents/Repos/dliver-bot/node_modules/axios/lib/core/settle.js:19:12)\n    at BrotliDecompress.handleStreamEnd (file:///Users/raymond/Documents/Repos/dliver-bot/node_modules/axios/lib/adapters/http.js:599:11)\n    at BrotliDecompress.emit (node:events:519:35)\n    at endReadableNT (node:internal/streams/readable:1696:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)\n    at Axios.request (file:///Users/raymond/Documents/Repos/dliver-bot/node_modules/axios/lib/core/Axios.js:45:41)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async checkWAPPConn (file:///Users/raymond/Documents/Repos/dliver-bot/src/utils/apiChecker.js:10:22)\n    at async checkAPIStatus (file:///Users/raymond/Documents/Repos/dliver-bot/src/server.js:45:18)","config":{"transitional":{"silentJSONParsing":true,"forcedJSONParsing":true,"clarifyTimeoutError":false},"adapter":["xhr","http","fetch"],"transformRequest":[null],"transformResponse":[null],"timeout":0,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN","maxContentLength":-1,"maxBodyLength":-1,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer EAANSE1RJzqsBO6gEO8h0v5M6cKSKvWWP48r5tVz6tZByi6vq9dVQTZAQrlfh8o7VFho0gbvJyN0fCgZBex15H3CNEEVwyz9Xo7Hrf0S30lBbs1Qa7wCXSiv3jZCnjF3Nnfqz93hbPsR6sugSsWXFYHxrcvSS35iztbX60QwwRCL1KVZBcvJtP9fssPmNF3caH5uM31NNfDxcZAkxZArNL2cOLTsdwcZD","User-Agent":"axios/1.8.1","Accept-Encoding":"gzip, compress, deflate, br"},"baseURL":"https://graph.facebook.com/v18.0","method":"get","url":"/me","allowAbsoluteUrls":true},"code":"ERR_BAD_REQUEST","status":401}
+Verifying device connection...
+Device connection verified
+formatted message: Your session will expire in 5 seconds. Please complete your interaction.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+Sent reminder message to 40774463442
+Received SMS from: 40774463442 at 2025-03-07T15:49:47.366Z with message: Test message
+Cleared existing session timeout for 40774463442
+Cleared existing reminder timeout for 40774463442
+Set session timeout and reminder timeout for 40774463442
+Verifying device connection...
+Device connection verified
+formatted message: Pentru a incepe, va rugam sa trimiteti un mesaj cu /start.
+Error from WhatsApp API: {"message":"Request failed with status code 401","name":"AxiosError","stack":"AxiosError: Request failed with status code 401\n    at settle (file:///Users/raymond/Documents/Repos/dliver-bot/node_modules/axios/lib/core/settle.js:19:12)\n    at BrotliDecompress.handleStreamEnd (file:///Users/raymond/Documents/Repos/dliver-bot/node_modules/axios/lib/adapters/http.js:599:11)\n    at BrotliDecompress.emit (node:events:519:35)\n    at endReadableNT (node:internal/streams/readable:1696:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)\n    at Axios.request (file:///Users/raymond/Documents/Repos/dliver-bot/node_modules/axios/lib/core/Axios.js:45:41)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async checkWAPPConn (file:///Users/raymond/Documents/Repos/dliver-bot/src/utils/apiChecker.js:10:22)\n    at async Timeout.checkAPIStatus [as _onTimeout] (file:///Users/raymond/Documents/Repos/dliver-bot/src/server.js:45:18)","config":{"transitional":{"silentJSONParsing":true,"forcedJSONParsing":true,"clarifyTimeoutError":false},"adapter":["xhr","http","fetch"],"transformRequest":[null],"transformResponse":[null],"timeout":0,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN","maxContentLength":-1,"maxBodyLength":-1,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer EAANSE1RJzqsBO6gEO8h0v5M6cKSKvWWP48r5tVz6tZByi6vq9dVQTZAQrlfh8o7VFho0gbvJyN0fCgZBex15H3CNEEVwyz9Xo7Hrf0S30lBbs1Qa7wCXSiv3jZCnjF3Nnfqz93hbPsR6sugSsWXFYHxrcvSS35iztbX60QwwRCL1KVZBcvJtP9fssPmNF3caH5uM31NNfDxcZAkxZArNL2cOLTsdwcZD","User-Agent":"axios/1.8.1","Accept-Encoding":"gzip, compress, deflate, br"},"baseURL":"https://graph.facebook.com/v18.0","method":"get","url":"/me","allowAbsoluteUrls":true},"code":"ERR_BAD_REQUEST","status":401}
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+User 40774463442 sent invalid start message
+Error from WhatsApp API: {"message":"Request failed with status code 401","name":"AxiosError","stack":"AxiosError: Request failed with status code 401\n    at settle (file:///Users/raymond/Documents/Repos/dliver-bot/node_modules/axios/lib/core/settle.js:19:12)\n    at BrotliDecompress.handleStreamEnd (file:///Users/raymond/Documents/Repos/dliver-bot/node_modules/axios/lib/adapters/http.js:599:11)\n    at BrotliDecompress.emit (node:events:519:35)\n    at endReadableNT (node:internal/streams/readable:1696:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)\n    at Axios.request (file:///Users/raymond/Documents/Repos/dliver-bot/node_modules/axios/lib/core/Axios.js:45:41)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async checkWAPPConn (file:///Users/raymond/Documents/Repos/dliver-bot/src/utils/apiChecker.js:10:22)\n    at async checkAPIStatus (file:///Users/raymond/Documents/Repos/dliver-bot/src/server.js:45:18)","config":{"transitional":{"silentJSONParsing":true,"forcedJSONParsing":true,"clarifyTimeoutError":false},"adapter":["xhr","http","fetch"],"transformRequest":[null],"transformResponse":[null],"timeout":0,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN","maxContentLength":-1,"maxBodyLength":-1,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer EAANSE1RJzqsBO6gEO8h0v5M6cKSKvWWP48r5tVz6tZByi6vq9dVQTZAQrlfh8o7VFho0gbvJyN0fCgZBex15H3CNEEVwyz9Xo7Hrf0S30lBbs1Qa7wCXSiv3jZCnjF3Nnfqz93hbPsR6sugSsWXFYHxrcvSS35iztbX60QwwRCL1KVZBcvJtP9fssPmNF3caH5uM31NNfDxcZAkxZArNL2cOLTsdwcZD","User-Agent":"axios/1.8.1","Accept-Encoding":"gzip, compress, deflate, br"},"baseURL":"https://graph.facebook.com/v18.0","method":"get","url":"/me","allowAbsoluteUrls":true},"code":"ERR_BAD_REQUEST","status":401}
+Error from WhatsApp API: {"message":"Request failed with status code 401","name":"AxiosError","stack":"AxiosError: Request failed with status code 401\n    at settle (file:///Users/raymond/Documents/Repos/dliver-bot/node_modules/axios/lib/core/settle.js:19:12)\n    at BrotliDecompress.handleStreamEnd (file:///Users/raymond/Documents/Repos/dliver-bot/node_modules/axios/lib/adapters/http.js:599:11)\n    at BrotliDecompress.emit (node:events:519:35)\n    at endReadableNT (node:internal/streams/readable:1696:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)\n    at Axios.request (file:///Users/raymond/Documents/Repos/dliver-bot/node_modules/axios/lib/core/Axios.js:45:41)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async checkWAPPConn (file:///Users/raymond/Documents/Repos/dliver-bot/src/utils/apiChecker.js:10:22)\n    at async Timeout.checkAPIStatus [as _onTimeout] (file:///Users/raymond/Documents/Repos/dliver-bot/src/server.js:45:18)","config":{"transitional":{"silentJSONParsing":true,"forcedJSONParsing":true,"clarifyTimeoutError":false},"adapter":["xhr","http","fetch"],"transformRequest":[null],"transformResponse":[null],"timeout":0,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN","maxContentLength":-1,"maxBodyLength":-1,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Authorization":"Bearer EAANSE1RJzqsBO6gEO8h0v5M6cKSKvWWP48r5tVz6tZByi6vq9dVQTZAQrlfh8o7VFho0gbvJyN0fCgZBex15H3CNEEVwyz9Xo7Hrf0S30lBbs1Qa7wCXSiv3jZCnjF3Nnfqz93hbPsR6sugSsWXFYHxrcvSS35iztbX60QwwRCL1KVZBcvJtP9fssPmNF3caH5uM31NNfDxcZAkxZArNL2cOLTsdwcZD","User-Agent":"axios/1.8.1","Accept-Encoding":"gzip, compress, deflate, br"},"baseURL":"https://graph.facebook.com/v18.0","method":"get","url":"/me","allowAbsoluteUrls":true},"code":"ERR_BAD_REQUEST","status":401}
+Response from WhatsApp API Status code : 200
+Received SMS from: +40774463442 at 1741363074000 with message: /start
+Initialized state for new user +40774463442
+Set session timeout and reminder timeout for +40774463442
+Verifying device connection...
+Device connection verified
+formatted message: Bine ati venit! Va rugam asteptati pana la verificarea numarului de telefon.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+User +40774463442 sent /start, proceeding to initial state
+Verifying device connection...
+Device connection verified
+formatted message: Numarul de telefon nu a fost identificat in baza noastra de date. Va rugam sa introduceti codul fiscal. (Exemplu: ROXXXXXXX sau XXXXXXX).
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+User +40774463442 not found, awaiting VAT number
+Verifying device connection...
+Device connection verified
+formatted message: Your session will expire in 5 seconds. Please complete your interaction.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+Sent reminder message to +40774463442
+Cleared session timeout for +40774463442 in endSession
+Cleared reminder timeout for +40774463442 in endSession
+Verifying device connection...
+Device connection verified
+formatted message: Aceasta sesiune a fost inchisa. Va rugam sa trimiteti un mesaj cu /start pentru a incepe o noua sesiune.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+Ended session for +40774463442
+Session timeout occurred for +40774463442
+Received SMS from: +40774463442 at 1741363122000 with message: /start
+Initialized state for new user +40774463442
+Set session timeout and reminder timeout for +40774463442
+Verifying device connection...
+Device connection verified
+formatted message: Bine ati venit! Va rugam asteptati pana la verificarea numarului de telefon.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+User +40774463442 sent /start, proceeding to initial state
+Verifying device connection...
+Device connection verified
+formatted message: Numarul de telefon nu a fost identificat in baza noastra de date. Va rugam sa introduceti codul fiscal. (Exemplu: ROXXXXXXX sau XXXXXXX).
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+User +40774463442 not found, awaiting VAT number
+Received SMS from: +40774463442 at 1741363138000 with message: 4696488
+Cleared existing session timeout for +40774463442
+Cleared existing reminder timeout for +40774463442
+Set session timeout and reminder timeout for +40774463442
+Checking VAT number: 4696488
+Updating phone number: +40774463442 for VAT: RO4696488
+Verifying device connection...
+Device connection verified
+formatted message: Verificare reusita. Va rugam sa trimiteti comanda.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+User +40774463442 VAT verified, awaiting order
+Received SMS from: +40774463442 at 1741363159000 with message: 20 cofrag ouă xl
+Cleared existing session timeout for +40774463442
+Cleared existing reminder timeout for +40774463442
+Set session timeout and reminder timeout for +40774463442
+Verifying device connection...
+Device connection verified
+formatted message: Comanda dumneavoastra este: 20 cofrag ouă xl. Va rugam sa confirmati comanda cu 'da' sau 'nu'.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+User +40774463442 sent order, awaiting confirmation
+Verifying device connection...
+Device connection verified
+formatted message: Your session will expire in 5 seconds. Please complete your interaction.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+Sent reminder message to +40774463442
+Cleared session timeout for +40774463442 in endSession
+Cleared reminder timeout for +40774463442 in endSession
+Verifying device connection...
+Device connection verified
+formatted message: Aceasta sesiune a fost inchisa. Va rugam sa trimiteti un mesaj cu /start pentru a incepe o noua sesiune.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+Ended session for +40774463442
+Session timeout occurred for +40774463442
+Received SMS from: +40774463442 at 1741363204000 with message: /start
+Initialized state for new user +40774463442
+Set session timeout and reminder timeout for +40774463442
+Verifying device connection...
+Device connection verified
+formatted message: Bine ati venit! Va rugam asteptati pana la verificarea numarului de telefon.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+User +40774463442 sent /start, proceeding to initial state
+Verifying device connection...
+Device connection verified
+formatted message: Sunteti deja verificat. Va rugam sa trimiteti comanda.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+User +40774463442 verified, awaiting order
+Received SMS from: +40774463442 at 1741363225000 with message: 20cofrag ouă xl
+Cleared existing session timeout for +40774463442
+Cleared existing reminder timeout for +40774463442
+Set session timeout and reminder timeout for +40774463442
+Verifying device connection...
+Device connection verified
+formatted message: Comanda dumneavoastra este: 20cofrag ouă xl. Va rugam sa confirmati comanda cu 'da' sau 'nu'.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+User +40774463442 sent order, awaiting confirmation
+Received SMS from: +40774463442 at 1741363246000 with message: salut
+Cleared existing session timeout for +40774463442
+Cleared existing reminder timeout for +40774463442
+Set session timeout and reminder timeout for +40774463442
+Verifying device connection...
+Device connection verified
+formatted message: Va rugam sa confirmati comanda cu 'da' sau 'nu'.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+User +40774463442 sent invalid confirmation
+Received SMS from: +40774463442 at 1741363260000 with message: da
+Cleared existing session timeout for +40774463442
+Cleared existing reminder timeout for +40774463442
+Set session timeout and reminder timeout for +40774463442
+Verifying device connection...
+Device connection verified
+formatted message: Comanda dumneavoastra a fost confirmata si va fi procesata. Va multumim!
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+Cleared session timeout for +40774463442 in endSession
+Cleared reminder timeout for +40774463442 in endSession
+Verifying device connection...
+Device connection verified
+formatted message: Aceasta sesiune a fost inchisa. Va rugam sa trimiteti un mesaj cu /start pentru a incepe o noua sesiune.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+Ended session for +40774463442
+User +40774463442 confirmed order, session ended
+Received SMS from: +40774463442 at 1741363388000 with message: /start
+Initialized state for new user +40774463442
+Set session timeout and reminder timeout for +40774463442
+Verifying device connection...
+Device connection verified
+formatted message: Bine ati venit! Va rugam asteptati pana la verificarea numarului de telefon.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+User +40774463442 sent /start, proceeding to initial state
+Verifying device connection...
+Device connection verified
+formatted message: Sunteti deja verificat. Va rugam sa trimiteti comanda.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+User +40774463442 verified, awaiting order
+Received SMS from: +40774463442 at 1741363407000 with message: 20 ouă xl
+Cleared existing session timeout for +40774463442
+Cleared existing reminder timeout for +40774463442
+Set session timeout and reminder timeout for +40774463442
+Verifying device connection...
+Device connection verified
+formatted message: Comanda dumneavoastra este: 20 ouă xl. Va rugam sa confirmati comanda cu 'da' sau 'nu'.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+User +40774463442 sent order, awaiting confirmation
+Received SMS from: +40774463442 at 1741363428000 with message: da
+Cleared existing session timeout for +40774463442
+Cleared existing reminder timeout for +40774463442
+Set session timeout and reminder timeout for +40774463442
+Verifying device connection...
+Device connection verified
+formatted message: Comanda dumneavoastra a fost confirmata si va fi procesata. Va multumim!
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+Cleared session timeout for +40774463442 in endSession
+Cleared reminder timeout for +40774463442 in endSession
+Verifying device connection...
+Device connection verified
+formatted message: Aceasta sesiune a fost inchisa. Va rugam sa trimiteti un mesaj cu /start pentru a incepe o noua sesiune.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+Ended session for +40774463442
+User +40774463442 confirmed order, session ended
+Response from WhatsApp API Status code : 200
+Received SMS from: +40774463442 at 1741363518000 with message: /start
+Initialized state for new user +40774463442
+Set session timeout and reminder timeout for +40774463442
+Verifying device connection...
+Device connection verified
+formatted message: Bine ati venit! Va rugam asteptati pana la verificarea numarului de telefon.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+User +40774463442 sent /start, proceeding to initial state
+Verifying device connection...
+Device connection verified
+formatted message: Sunteti deja verificat. Va rugam sa trimiteti comanda.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+User +40774463442 verified, awaiting order
+Received SMS from: +40774463442 at 1741363538000 with message: 20 ouă xl
+Cleared existing session timeout for +40774463442
+Cleared existing reminder timeout for +40774463442
+Set session timeout and reminder timeout for +40774463442
+Verifying device connection...
+Device connection verified
+formatted message: Comanda dumneavoastra este: 20 ouă xl.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+Verifying device connection...
+Device connection verified
+formatted message: Va rugam sa confirmati comanda cu 'da' sau 'nu'.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+User +40774463442 sent order, awaiting confirmation
+Received SMS from: +40774463442 at 1741363552000 with message: da
+Cleared existing session timeout for +40774463442
+Cleared existing reminder timeout for +40774463442
+Set session timeout and reminder timeout for +40774463442
+Verifying device connection...
+Device connection verified
+formatted message: Comanda dumneavoastra a fost confirmata si va fi procesata. Va multumim!
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+Cleared session timeout for +40774463442 in endSession
+Cleared reminder timeout for +40774463442 in endSession
+Verifying device connection...
+Device connection verified
+formatted message: Aceasta sesiune a fost inchisa. Va rugam sa trimiteti un mesaj cu /start pentru a incepe o noua sesiune.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+Ended session for +40774463442
+User +40774463442 confirmed order, session ended
+Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"contacts":[{"profile":{"name":"raymond"},"wa_id":"40774463442"}],"messages":[{"from":"40774463442","id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgASGBQzQTQyODkzRjNCNTREQjk5MjlFNgA=","timestamp":"1741363615","text":{"body":"salut"},"type":"text"}]},"field":"messages"}]}]} + "
+"Initialized state for new user 40774463442
+Set session timeout and reminder timeout for 40774463442
+User 40774463442 sent invalid start message
+Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"statuses":[{"id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgARGBJBNTU0NTcxQUMxNEJCN0I0QUQA","status":"sent","timestamp":"1741363618","recipient_id":"40774463442","conversation":{"id":"d6756be12a8aa8dc386a6c71c0939e3b","expiration_timestamp":"1741450020","origin":{"type":"service"}},"pricing":{"billable":true,"pricing_model":"CBP","category":"service"}}]},"field":"messages"}]}]} + "
+"Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"statuses":[{"id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgARGBJBNTU0NTcxQUMxNEJCN0I0QUQA","status":"delivered","timestamp":"1741363618","recipient_id":"40774463442","conversation":{"id":"d6756be12a8aa8dc386a6c71c0939e3b","origin":{"type":"service"}},"pricing":{"billable":true,"pricing_model":"CBP","category":"service"}}]},"field":"messages"}]}]} + "
+"Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"statuses":[{"id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgARGBJBNTU0NTcxQUMxNEJCN0I0QUQA","status":"read","timestamp":"1741363619","recipient_id":"40774463442"}]},"field":"messages"}]}]} + "
+"Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"contacts":[{"profile":{"name":"raymond"},"wa_id":"40774463442"}],"messages":[{"from":"40774463442","id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgASGBQzQTFEMzhFNEQwRThBMzQzNDQ4MQA=","timestamp":"1741363623","text":{"body":"/start"},"type":"text"}]},"field":"messages"}]}]} + "
+"Cleared existing session timeout for 40774463442
+Cleared existing reminder timeout for 40774463442
+Set session timeout and reminder timeout for 40774463442
+User 40774463442 sent /start, proceeding to initial state
+User 40774463442 verified, awaiting order
+Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"statuses":[{"id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgARGBI2MkQ1MjlEMDFCQUZEMDI0MjMA","status":"sent","timestamp":"1741363625","recipient_id":"40774463442","conversation":{"id":"d6756be12a8aa8dc386a6c71c0939e3b","expiration_timestamp":"1741450020","origin":{"type":"service"}},"pricing":{"billable":true,"pricing_model":"CBP","category":"service"}}]},"field":"messages"}]}]} + "
+"Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"statuses":[{"id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgARGBI2MkQ1MjlEMDFCQUZEMDI0MjMA","status":"delivered","timestamp":"1741363625","recipient_id":"40774463442","conversation":{"id":"d6756be12a8aa8dc386a6c71c0939e3b","origin":{"type":"service"}},"pricing":{"billable":true,"pricing_model":"CBP","category":"service"}}]},"field":"messages"}]}]} + "
+"Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"statuses":[{"id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgARGBI0RTU1MDIzNzI5OTYwOURCNEYA","status":"sent","timestamp":"1741363626","recipient_id":"40774463442","conversation":{"id":"d6756be12a8aa8dc386a6c71c0939e3b","expiration_timestamp":"1741450020","origin":{"type":"service"}},"pricing":{"billable":true,"pricing_model":"CBP","category":"service"}}]},"field":"messages"}]}]} + "
+"Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"statuses":[{"id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgARGBI2MkQ1MjlEMDFCQUZEMDI0MjMA","status":"read","timestamp":"1741363626","recipient_id":"40774463442"}]},"field":"messages"}]}]} + "
+"Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"statuses":[{"id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgARGBI0RTU1MDIzNzI5OTYwOURCNEYA","status":"delivered","timestamp":"1741363626","recipient_id":"40774463442","conversation":{"id":"d6756be12a8aa8dc386a6c71c0939e3b","origin":{"type":"service"}},"pricing":{"billable":true,"pricing_model":"CBP","category":"service"}}]},"field":"messages"}]}]} + "
+"Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"statuses":[{"id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgARGBI0RTU1MDIzNzI5OTYwOURCNEYA","status":"read","timestamp":"1741363626","recipient_id":"40774463442"}]},"field":"messages"}]}]} + "
+"Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"contacts":[{"profile":{"name":"raymond"},"wa_id":"40774463442"}],"messages":[{"from":"40774463442","id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgASGBQzQUE0MUM2QUU5RjhGMDk1QjQyQQA=","timestamp":"1741363633","text":{"body":"20 ouă xl"},"type":"text"}]},"field":"messages"}]}]} + "
+"Cleared existing session timeout for 40774463442
+Cleared existing reminder timeout for 40774463442
+Set session timeout and reminder timeout for 40774463442
+User 40774463442 sent order, awaiting confirmation
+Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"statuses":[{"id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgARGBJGMTRFRjExRjhBMjAxMDAyQTAA","status":"sent","timestamp":"1741363635","recipient_id":"40774463442","conversation":{"id":"d6756be12a8aa8dc386a6c71c0939e3b","expiration_timestamp":"1741450020","origin":{"type":"service"}},"pricing":{"billable":true,"pricing_model":"CBP","category":"service"}}]},"field":"messages"}]}]} + "
+"Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"statuses":[{"id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgARGBJGMTRFRjExRjhBMjAxMDAyQTAA","status":"delivered","timestamp":"1741363635","recipient_id":"40774463442","conversation":{"id":"d6756be12a8aa8dc386a6c71c0939e3b","origin":{"type":"service"}},"pricing":{"billable":true,"pricing_model":"CBP","category":"service"}}]},"field":"messages"}]}]} + "
+"Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"statuses":[{"id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgARGBJGMTRFRjExRjhBMjAxMDAyQTAA","status":"read","timestamp":"1741363635","recipient_id":"40774463442"}]},"field":"messages"}]}]} + "
+"Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"statuses":[{"id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgARGBJGMTRFRjExRjhBMjAxMDAyQTAA","status":"delivered","timestamp":"1741363635","recipient_id":"40774463442","conversation":{"id":"d6756be12a8aa8dc386a6c71c0939e3b","origin":{"type":"service"}},"pricing":{"billable":true,"pricing_model":"CBP","category":"service"}}]},"field":"messages"}]}]} + "
+"Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"statuses":[{"id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgARGBI5MTBDRTk1ODlGNUJGQ0NGMEEA","status":"sent","timestamp":"1741363635","recipient_id":"40774463442","conversation":{"id":"d6756be12a8aa8dc386a6c71c0939e3b","expiration_timestamp":"1741450020","origin":{"type":"service"}},"pricing":{"billable":true,"pricing_model":"CBP","category":"service"}}]},"field":"messages"}]}]} + "
+"Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"statuses":[{"id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgARGBI5MTBDRTk1ODlGNUJGQ0NGMEEA","status":"delivered","timestamp":"1741363636","recipient_id":"40774463442","conversation":{"id":"d6756be12a8aa8dc386a6c71c0939e3b","origin":{"type":"service"}},"pricing":{"billable":true,"pricing_model":"CBP","category":"service"}}]},"field":"messages"}]}]} + "
+"Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"statuses":[{"id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgARGBI5MTBDRTk1ODlGNUJGQ0NGMEEA","status":"read","timestamp":"1741363636","recipient_id":"40774463442"}]},"field":"messages"}]}]} + "
+"Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"contacts":[{"profile":{"name":"raymond"},"wa_id":"40774463442"}],"messages":[{"from":"40774463442","id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgASGBQzQTIxMDQ0MkVFOTc0MUE4MDVDOAA=","timestamp":"1741363638","text":{"body":"da"},"type":"text"}]},"field":"messages"}]}]} + "
+"Cleared existing session timeout for 40774463442
+Cleared existing reminder timeout for 40774463442
+Set session timeout and reminder timeout for 40774463442
+Cleared session timeout for 40774463442 in endSession
+Cleared reminder timeout for 40774463442 in endSession
+Ended session for 40774463442
+User 40774463442 confirmed order, session ended
+Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"statuses":[{"id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgARGBIwRUREOEQ5REU1QjJDMjUzMkMA","status":"sent","timestamp":"1741363640","recipient_id":"40774463442","conversation":{"id":"d6756be12a8aa8dc386a6c71c0939e3b","expiration_timestamp":"1741450020","origin":{"type":"service"}},"pricing":{"billable":true,"pricing_model":"CBP","category":"service"}}]},"field":"messages"}]}]} + "
+"Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"statuses":[{"id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgARGBIwRUREOEQ5REU1QjJDMjUzMkMA","status":"delivered","timestamp":"1741363640","recipient_id":"40774463442","conversation":{"id":"d6756be12a8aa8dc386a6c71c0939e3b","origin":{"type":"service"}},"pricing":{"billable":true,"pricing_model":"CBP","category":"service"}}]},"field":"messages"}]}]} + "
+"Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"statuses":[{"id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgARGBIwRUREOEQ5REU1QjJDMjUzMkMA","status":"delivered","timestamp":"1741363640","recipient_id":"40774463442","conversation":{"id":"d6756be12a8aa8dc386a6c71c0939e3b","origin":{"type":"service"}},"pricing":{"billable":true,"pricing_model":"CBP","category":"service"}}]},"field":"messages"}]}]} + "
+"Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"statuses":[{"id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgARGBIwRUREOEQ5REU1QjJDMjUzMkMA","status":"read","timestamp":"1741363640","recipient_id":"40774463442"}]},"field":"messages"}]}]} + "
+"Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"statuses":[{"id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgARGBI5OTFCQTA1QTU3RDJGRDJGNTgA","status":"delivered","timestamp":"1741363641","recipient_id":"40774463442","conversation":{"id":"d6756be12a8aa8dc386a6c71c0939e3b","origin":{"type":"service"}},"pricing":{"billable":true,"pricing_model":"CBP","category":"service"}}]},"field":"messages"}]}]} + "
+"Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"statuses":[{"id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgARGBI5OTFCQTA1QTU3RDJGRDJGNTgA","status":"sent","timestamp":"1741363640","recipient_id":"40774463442","conversation":{"id":"d6756be12a8aa8dc386a6c71c0939e3b","expiration_timestamp":"1741450020","origin":{"type":"service"}},"pricing":{"billable":true,"pricing_model":"CBP","category":"service"}}]},"field":"messages"}]}]} + "
+"Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"statuses":[{"id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgARGBI5OTFCQTA1QTU3RDJGRDJGNTgA","status":"read","timestamp":"1741363641","recipient_id":"40774463442"}]},"field":"messages"}]}]} + "
+"Received SMS from: +40774463442 at 1741363806000 with message: salut
+Initialized state for new user +40774463442
+Set session timeout and reminder timeout for +40774463442
+Verifying device connection...
+Device connection verified
+formatted message: Pentru a incepe, va rugam sa trimiteti un mesaj cu /start.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+User +40774463442 sent invalid start message
+Verifying device connection...
+Device connection verified
+formatted message: Your session will expire in 5 seconds. Please complete your interaction.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+Sent reminder message to +40774463442
+Cleared session timeout for +40774463442 in endSession
+Cleared reminder timeout for +40774463442 in endSession
+Verifying device connection...
+Device connection verified
+formatted message: Aceasta sesiune a fost inchisa. Va rugam sa trimiteti un mesaj cu /start pentru a incepe o noua sesiune.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+Ended session for +40774463442
+Session timeout occurred for +40774463442
+Received SMS from: +40774463442 at 1741363852000 with message: /start
+Initialized state for new user +40774463442
+Set session timeout and reminder timeout for +40774463442
+Verifying device connection...
+Device connection verified
+formatted message: Bine ati venit! Va rugam asteptati pana la verificarea numarului de telefon.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+User +40774463442 sent /start, proceeding to initial state
+Verifying device connection...
+Device connection verified
+formatted message: Sunteti deja verificat. Va rugam sa trimiteti comanda.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+User +40774463442 verified, awaiting order
+Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"contacts":[{"profile":{"name":"raymond"},"wa_id":"40774463442"}],"messages":[{"from":"40774463442","id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgASGBQzQThDMkU4QTA1REEyNkU1NjEyNAA=","timestamp":"1741257043","text":{"body":"s"},"type":"text"}]},"field":"messages"}]}]} + "
+"Initialized state for new user 40774463442
+Set session timeout and reminder timeout for 40774463442
+User 40774463442 sent invalid start message
+Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"statuses":[{"id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgARGBIxQkQ3MTkxNUQ5Nzg2MDc0MjgA","status":"sent","timestamp":"1741363865","recipient_id":"40774463442","conversation":{"id":"d6756be12a8aa8dc386a6c71c0939e3b","expiration_timestamp":"1741450020","origin":{"type":"service"}},"pricing":{"billable":true,"pricing_model":"CBP","category":"service"}}]},"field":"messages"}]}]} + "
+"Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"statuses":[{"id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgARGBIxQkQ3MTkxNUQ5Nzg2MDc0MjgA","status":"delivered","timestamp":"1741363865","recipient_id":"40774463442","conversation":{"id":"d6756be12a8aa8dc386a6c71c0939e3b","origin":{"type":"service"}},"pricing":{"billable":true,"pricing_model":"CBP","category":"service"}}]},"field":"messages"}]}]} + "
+"Received SMS from: +40774463442 at 1741363874000 with message: 20 cofraje xl
+Cleared existing session timeout for +40774463442
+Cleared existing reminder timeout for +40774463442
+Set session timeout and reminder timeout for +40774463442
+Verifying device connection...
+Device connection verified
+formatted message: Comanda dumneavoastra este: 20 cofraje xl.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+Verifying device connection...
+Device connection verified
+formatted message: Va rugam sa confirmati comanda cu 'da' sau 'nu'.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+User +40774463442 sent order, awaiting confirmation
+Sent reminder message to 40774463442
+Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"statuses":[{"id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgARGBIwRjQ4NTFFMTA3NEZGMjZEMTEA","status":"sent","timestamp":"1741363890","recipient_id":"40774463442","conversation":{"id":"d6756be12a8aa8dc386a6c71c0939e3b","expiration_timestamp":"1741450020","origin":{"type":"service"}},"pricing":{"billable":true,"pricing_model":"CBP","category":"service"}}]},"field":"messages"}]}]} + "
+"Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"statuses":[{"id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgARGBIwRjQ4NTFFMTA3NEZGMjZEMTEA","status":"delivered","timestamp":"1741363890","recipient_id":"40774463442","conversation":{"id":"d6756be12a8aa8dc386a6c71c0939e3b","origin":{"type":"service"}},"pricing":{"billable":true,"pricing_model":"CBP","category":"service"}}]},"field":"messages"}]}]} + "
+"Cleared session timeout for 40774463442 in endSession
+Cleared reminder timeout for 40774463442 in endSession
+Ended session for 40774463442
+Session timeout occurred for 40774463442
+Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"statuses":[{"id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgARGBI4NDYwMkY3ODU1OUIyQjA5RkYA","status":"sent","timestamp":"1741363895","recipient_id":"40774463442","conversation":{"id":"d6756be12a8aa8dc386a6c71c0939e3b","expiration_timestamp":"1741450020","origin":{"type":"service"}},"pricing":{"billable":true,"pricing_model":"CBP","category":"service"}}]},"field":"messages"}]}]} + "
+"Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"statuses":[{"id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgARGBI4NDYwMkY3ODU1OUIyQjA5RkYA","status":"delivered","timestamp":"1741363895","recipient_id":"40774463442","conversation":{"id":"d6756be12a8aa8dc386a6c71c0939e3b","origin":{"type":"service"}},"pricing":{"billable":true,"pricing_model":"CBP","category":"service"}}]},"field":"messages"}]}]} + "
+"Received SMS from: +40774463442 at 1741363890000 with message: nu
+Cleared existing session timeout for +40774463442
+Cleared existing reminder timeout for +40774463442
+Set session timeout and reminder timeout for +40774463442
+Verifying device connection...
+Device connection verified
+formatted message: Comanda dumneavoastra a fost anulata. Va rugam sa trimiteti o noua comanda.
+Cleared session timeout for +40774463442 in endSession
+Cleared reminder timeout for +40774463442 in endSession
+Verifying device connection...
+Error sending SMS via ADB: Error: Command failed: 
+       adb shell service call isms 7 i32 0 s16 "com.android.mms.service" s16 "+40774463442" s16 null s16 '"Comanda dumneavoastra a fost anulata. Va rugam sa trimiteti o noua comanda."' s16 null s16 null
+    
+error: closed
+
+Error handling user interaction for +40774463442: Error: Failed to send SMS via ADB
+Verifying device connection...
+Device connection verified
+formatted message: Aceasta sesiune a fost inchisa. Va rugam sa trimiteti un mesaj cu /start pentru a incepe o noua sesiune.
+Device connection verified
+formatted message: Ceva nu a mers bine. Va rugam sa incercati din nou.
+Error sending SMS via ADB: Error: Command failed: 
+       adb shell service call isms 7 i32 0 s16 "com.android.mms.service" s16 "+40774463442" s16 null s16 '"Aceasta sesiune a fost inchisa. Va rugam sa trimiteti un mesaj cu /start pentru a incepe o noua sesiune."' s16 null s16 null
+    
+adb: device offline
+
+Response from WhatsApp API Status code : 200
+Received SMS from: +40774463442 at 1741365405000 with message: /start
+Initialized state for new user +40774463442
+Set session timeout and reminder timeout for +40774463442
+Verifying device connection...
+Device connection verified
+formatted message: Bine ati venit! Va rugam asteptati pana la verificarea numarului de telefon.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+User +40774463442 sent /start, proceeding to initial state
+Verifying device connection...
+Device connection verified
+formatted message: Sunteti deja verificat. Va rugam sa trimiteti comanda.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+User +40774463442 verified, awaiting order
+Received SMS from: +40774463442 at 1741365432000 with message: 20 ouă xl
+Cleared existing session timeout for +40774463442
+Cleared existing reminder timeout for +40774463442
+Set session timeout and reminder timeout for +40774463442
+Verifying device connection...
+Device connection verified
+formatted message: Comanda dumneavoastra este: 20 ouă xl.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+Verifying device connection...
+Device connection verified
+formatted message: Va rugam sa confirmati comanda cu 'da' sau 'nu'.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+User +40774463442 sent order, awaiting confirmation
+Received SMS from: +40774463442 at 1741365446000 with message: nu
+Cleared existing session timeout for +40774463442
+Cleared existing reminder timeout for +40774463442
+Set session timeout and reminder timeout for +40774463442
+Verifying device connection...
+Device connection verified
+formatted message: Comanda dumneavoastra a fost anulata. Va rugam sa trimiteti o noua comanda.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+User +40774463442 canceled order, awaiting new order
+Received SMS from: +40774463442 at 1741365472000 with message: 40 ouă m și 20 ouă xl
+Cleared existing session timeout for +40774463442
+Cleared existing reminder timeout for +40774463442
+Set session timeout and reminder timeout for +40774463442
+Verifying device connection...
+Device connection verified
+formatted message: Comanda dumneavoastra este: 40 ouă m și 20 ouă xl.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+Verifying device connection...
+Device connection verified
+formatted message: Va rugam sa confirmati comanda cu 'da' sau 'nu'.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+User +40774463442 sent order, awaiting confirmation
+Received SMS from: +40774463442 at 1741365496000 with message: nu
+Cleared existing session timeout for +40774463442
+Cleared existing reminder timeout for +40774463442
+Set session timeout and reminder timeout for +40774463442
+Verifying device connection...
+Device connection verified
+formatted message: Comanda dumneavoastra a fost anulata. Va rugam sa trimiteti o noua comanda.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+User +40774463442 canceled order, awaiting new order
+Received SMS from: +40774463442 at 1741365515000 with message: 20 ouă xl
+Cleared existing session timeout for +40774463442
+Cleared existing reminder timeout for +40774463442
+Set session timeout and reminder timeout for +40774463442
+Verifying device connection...
+Device connection verified
+formatted message: Comanda dumneavoastra este: 20 ouă xl.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+Verifying device connection...
+Device connection verified
+formatted message: Va rugam sa confirmati comanda cu 'da' sau 'nu'.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+User +40774463442 sent order, awaiting confirmation
+Received SMS from: +40774463442 at 1741365537000 with message: da
+Cleared existing session timeout for +40774463442
+Cleared existing reminder timeout for +40774463442
+Set session timeout and reminder timeout for +40774463442
+Verifying device connection...
+Device connection verified
+formatted message: Comanda dumneavoastra a fost confirmata si va fi procesata. Va multumim!
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+Cleared session timeout for +40774463442 in endSession
+Cleared reminder timeout for +40774463442 in endSession
+Verifying device connection...
+Device connection verified
+formatted message: Aceasta sesiune a fost inchisa. Va rugam sa trimiteti un mesaj cu /start pentru a incepe o noua sesiune.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+Ended session for +40774463442
+User +40774463442 confirmed order, session ended
+Received SMS from: +40723541380 at 1741365558000 with message: salut
+Initialized state for new user +40723541380
+Set session timeout and reminder timeout for +40723541380
+Verifying device connection...
+Device connection verified
+formatted message: Pentru a incepe, va rugam sa trimiteti un mesaj cu /start.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+User +40723541380 sent invalid start message
+Received SMS from: +40774463442 at 1741365562000 with message: /start
+Initialized state for new user +40774463442
+Set session timeout and reminder timeout for +40774463442
+Verifying device connection...
+Device connection verified
+formatted message: Bine ati venit! Va rugam asteptati pana la verificarea numarului de telefon.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+User +40774463442 sent /start, proceeding to initial state
+Verifying device connection...
+Device connection verified
+formatted message: Sunteti deja verificat. Va rugam sa trimiteti comanda.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+User +40774463442 verified, awaiting order
+Received SMS from: +40723541380 at 1741365576000 with message: /start
+Cleared existing session timeout for +40723541380
+Cleared existing reminder timeout for +40723541380
+Set session timeout and reminder timeout for +40723541380
+Verifying device connection...
+Device connection verified
+formatted message: Bine ati venit! Va rugam asteptati pana la verificarea numarului de telefon.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+User +40723541380 sent /start, proceeding to initial state
+Verifying device connection...
+Device connection verified
+formatted message: Numarul de telefon nu a fost identificat in baza noastra de date. Va rugam sa introduceti codul fiscal. (Exemplu: ROXXXXXXX sau XXXXXXX).
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+User +40723541380 not found, awaiting VAT number
+Received SMS from: +40723541380 at 1741365629000 with message: 4696488
+Cleared existing session timeout for +40723541380
+Cleared existing reminder timeout for +40723541380
+Set session timeout and reminder timeout for +40723541380
+Checking VAT number: 4696488
+Updating phone number: +40723541380 for VAT: RO4696488
+Verifying device connection...
+Device connection verified
+formatted message: Verificare reusita. Va rugam sa trimiteti comanda.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+User +40723541380 VAT verified, awaiting order
+Received SMS from: +40774463442 at 1741365637000 with message: 20 ouă xl
+Cleared existing session timeout for +40774463442
+Cleared existing reminder timeout for +40774463442
+Set session timeout and reminder timeout for +40774463442
+Verifying device connection...
+Device connection verified
+formatted message: Comanda dumneavoastra este: 20 ouă xl.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+Verifying device connection...
+Device connection verified
+formatted message: Va rugam sa confirmati comanda cu 'da' sau 'nu'.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+User +40774463442 sent order, awaiting confirmation
+Received SMS from: +40774463442 at 1741365646000 with message: da
+Cleared existing session timeout for +40774463442
+Cleared existing reminder timeout for +40774463442
+Set session timeout and reminder timeout for +40774463442
+Verifying device connection...
+Device connection verified
+formatted message: Comanda dumneavoastra a fost confirmata si va fi procesata. Va multumim!
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+Cleared session timeout for +40774463442 in endSession
+Cleared reminder timeout for +40774463442 in endSession
+Verifying device connection...
+Device connection verified
+formatted message: Aceasta sesiune a fost inchisa. Va rugam sa trimiteti un mesaj cu /start pentru a incepe o noua sesiune.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+Ended session for +40774463442
+User +40774463442 confirmed order, session ended
+Received SMS from: +40723541380 at 1741365654000 with message: 20 rm20
+Cleared existing session timeout for +40723541380
+Cleared existing reminder timeout for +40723541380
+Set session timeout and reminder timeout for +40723541380
+Verifying device connection...
+Device connection verified
+formatted message: Comanda dumneavoastra este: 20 rm20.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+Verifying device connection...
+Device connection verified
+formatted message: Va rugam sa confirmati comanda cu 'da' sau 'nu'.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+User +40723541380 sent order, awaiting confirmation
+Received SMS from: +40723541380 at 1741365654000 with message: 20 rm20
+Cleared existing session timeout for +40723541380
+Cleared existing reminder timeout for +40723541380
+Set session timeout and reminder timeout for +40723541380
+Verifying device connection...
+Device connection verified
+formatted message: Va rugam sa confirmati comanda cu 'da' sau 'nu'.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+User +40723541380 sent invalid confirmation
+Received SMS from: +40723541380 at 1741365744000 with message: nu
+Cleared existing session timeout for +40723541380
+Cleared existing reminder timeout for +40723541380
+Set session timeout and reminder timeout for +40723541380
+Verifying device connection...
+Device connection verified
+formatted message: Comanda dumneavoastra a fost anulata. Va rugam sa trimiteti o noua comanda.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+User +40723541380 canceled order, awaiting new order
+Received SMS from: +40723541380 at 1741365765000 with message: 70 rm30
+Cleared existing session timeout for +40723541380
+Cleared existing reminder timeout for +40723541380
+Set session timeout and reminder timeout for +40723541380
+Verifying device connection...
+Device connection verified
+formatted message: Comanda dumneavoastra este: 70 rm30.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+Verifying device connection...
+Device connection verified
+formatted message: Va rugam sa confirmati comanda cu 'da' sau 'nu'.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+User +40723541380 sent order, awaiting confirmation
+Received SMS from: +40723541380 at 1741365814000 with message: da
+Cleared existing session timeout for +40723541380
+Cleared existing reminder timeout for +40723541380
+Set session timeout and reminder timeout for +40723541380
+Verifying device connection...
+Device connection verified
+formatted message: Comanda dumneavoastra a fost confirmata si va fi procesata. Va multumim!
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+Cleared session timeout for +40723541380 in endSession
+Cleared reminder timeout for +40723541380 in endSession
+Verifying device connection...
+Device connection verified
+formatted message: Aceasta sesiune a fost inchisa. Va rugam sa trimiteti un mesaj cu /start pentru a incepe o noua sesiune.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+Ended session for +40723541380
+User +40723541380 confirmed order, session ended
+Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"statuses":[{"id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgARGBIxQkQ3MTkxNUQ5Nzg2MDc0MjgA","status":"read","timestamp":"1741366100","recipient_id":"40774463442"}]},"field":"messages"}]}]} + "
+"Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"statuses":[{"id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgARGBIwRjQ4NTFFMTA3NEZGMjZEMTEA","status":"read","timestamp":"1741366100","recipient_id":"40774463442"}]},"field":"messages"}]}]} + "
+"Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"statuses":[{"id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgARGBI4NDYwMkY3ODU1OUIyQjA5RkYA","status":"read","timestamp":"1741366100","recipient_id":"40774463442"}]},"field":"messages"}]}]} + "
+"Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"contacts":[{"profile":{"name":"raymond"},"wa_id":"40774463442"}],"messages":[{"from":"40774463442","id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgASGBQzQTAyQTJCRkIxMzc0NjMxQTU4NAA=","timestamp":"1741366104","text":{"body":"/start"},"type":"text"}]},"field":"messages"}]}]} + "
+"Initialized state for new user 40774463442
+Set session timeout and reminder timeout for 40774463442
+User 40774463442 sent /start, proceeding to initial state
+User 40774463442 not found, awaiting VAT number
+Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"statuses":[{"id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgARGBIyRkQ1RjY2NTJGRDAyNkU5MEIA","status":"sent","timestamp":"1741366106","recipient_id":"40774463442","conversation":{"id":"d6756be12a8aa8dc386a6c71c0939e3b","expiration_timestamp":"1741450020","origin":{"type":"service"}},"pricing":{"billable":true,"pricing_model":"CBP","category":"service"}}]},"field":"messages"}]}]} + "
+"Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"statuses":[{"id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgARGBIyRkQ1RjY2NTJGRDAyNkU5MEIA","status":"delivered","timestamp":"1741366106","recipient_id":"40774463442","conversation":{"id":"d6756be12a8aa8dc386a6c71c0939e3b","origin":{"type":"service"}},"pricing":{"billable":true,"pricing_model":"CBP","category":"service"}}]},"field":"messages"}]}]} + "
+"Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"statuses":[{"id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgARGBJGRTk1REYwODEwMTY1NzFDRUIA","status":"sent","timestamp":"1741366107","recipient_id":"40774463442","conversation":{"id":"d6756be12a8aa8dc386a6c71c0939e3b","expiration_timestamp":"1741450020","origin":{"type":"service"}},"pricing":{"billable":true,"pricing_model":"CBP","category":"service"}}]},"field":"messages"}]}]} + "
+"Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"statuses":[{"id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgARGBIyRkQ1RjY2NTJGRDAyNkU5MEIA","status":"read","timestamp":"1741366106","recipient_id":"40774463442"}]},"field":"messages"}]}]} + "
+"Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"statuses":[{"id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgARGBIyRkQ1RjY2NTJGRDAyNkU5MEIA","status":"delivered","timestamp":"1741366106","recipient_id":"40774463442","conversation":{"id":"d6756be12a8aa8dc386a6c71c0939e3b","origin":{"type":"service"}},"pricing":{"billable":true,"pricing_model":"CBP","category":"service"}}]},"field":"messages"}]}]} + "
+"Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"statuses":[{"id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgARGBJGRTk1REYwODEwMTY1NzFDRUIA","status":"delivered","timestamp":"1741366107","recipient_id":"40774463442","conversation":{"id":"d6756be12a8aa8dc386a6c71c0939e3b","origin":{"type":"service"}},"pricing":{"billable":true,"pricing_model":"CBP","category":"service"}}]},"field":"messages"}]}]} + "
+"Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"statuses":[{"id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgARGBJGRTk1REYwODEwMTY1NzFDRUIA","status":"read","timestamp":"1741366107","recipient_id":"40774463442"}]},"field":"messages"}]}]} + "
+"Response from WhatsApp API Status code : 200
+Error handling SMS: TypeError: Assignment to constant variable.
+Error handling SMS: TypeError: Assignment to constant variable.
+Error handling SMS: TypeError: Assignment to constant variable.
+Response from WhatsApp API Status code : 200
+Received SMS from: +40774463442 at 1741366372000 with message: /start
+Initialized state for new user +40774463442
+Set session timeout and reminder timeout for +40774463442
+Verifying device connection...
+Device connection verified
+formatted message: Bine ati venit! Va rugam asteptati pana la verificarea numarului de telefon.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+User +40774463442 sent /start, proceeding to initial state
+Verifying device connection...
+Device connection verified
+formatted message: Numarul de telefon nu a fost identificat in baza noastra de date. Va rugam sa introduceti codul fiscal. (Exemplu: ROXXXXXXX sau XXXXXXX).
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+User +40774463442 not found, awaiting VAT number
+Response from WhatsApp API Status code : 200
+Received SMS from: +40774463442 at 1741366461000 with message: /start
+Initialized state for new user +40774463442
+Set session timeout and reminder timeout for +40774463442
+Verifying device connection...
+Device connection verified
+formatted message: Bine ati venit! Va rugam asteptati pana la verificarea numarului de telefon.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+User +40774463442 sent /start, proceeding to initial state
+Verifying device connection...
+Device connection verified
+formatted message: Numarul de telefon nu a fost identificat in baza noastra de date. Va rugam sa introduceti codul fiscal. (Exemplu: ROXXXXXXX sau XXXXXXX).
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+User +40774463442 not found, awaiting VAT number
+Received SMS from: +40774463442 at 1741366306000 with message: /start
+Cleared existing session timeout for +40774463442
+Cleared existing reminder timeout for +40774463442
+Set session timeout and reminder timeout for +40774463442
+Checking VAT number: /start
+Received SMS from: +40774463442 at 1741366487000 with message: 30485641
+Cleared existing session timeout for +40774463442
+Cleared existing reminder timeout for +40774463442
+Set session timeout and reminder timeout for +40774463442
+Checking VAT number: 30485641
+Database error: TypeError: Cannot convert undefined or null to object
+Error handling user interaction for +40774463442: TypeError: Cannot convert undefined or null to object
+Verifying device connection...
+Updating phone number: 40774463442 for VAT: 30485641
+Device connection verified
+formatted message: Ceva nu a mers bine. Va rugam sa incercati din nou.
+Verifying device connection...
+Device connection verified
+formatted message: Verificare reusita. Va rugam sa trimiteti comanda.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+User +40774463442 VAT verified, awaiting order
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+Response from WhatsApp API Status code : 200
+Received SMS from: +40774463442 at 1741366715000 with message: /start
+Initialized state for new user +40774463442
+Set session timeout and reminder timeout for +40774463442
+Verifying device connection...
+Device connection verified
+formatted message: Bine ati venit! Va rugam asteptati pana la verificarea numarului de telefon.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+User +40774463442 sent /start, proceeding to initial state
+Verifying device connection...
+Device connection verified
+formatted message: Numarul de telefon nu a fost identificat in baza noastra de date. Va rugam sa introduceti codul fiscal. (Exemplu: ROXXXXXXX sau XXXXXXX).
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+User +40774463442 not found, awaiting VAT number
+Received SMS from: +40774463442 at 1741366729000 with message: 30485641
+Cleared existing session timeout for +40774463442
+Cleared existing reminder timeout for +40774463442
+Set session timeout and reminder timeout for +40774463442
+Checking VAT number: 30485641
+Updating phone number: +40774463442 for VAT: 30485641
+Verifying device connection...
+Device connection verified
+formatted message: Verificare reusita. Va rugam sa trimiteti comanda.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+User +40774463442 VAT verified, awaiting order
+Received SMS from: +40774463442 at 1741366749000 with message: 20oua xl
+Cleared existing session timeout for +40774463442
+Cleared existing reminder timeout for +40774463442
+Set session timeout and reminder timeout for +40774463442
+Verifying device connection...
+Device connection verified
+formatted message: Comanda dumneavoastra este: 20oua xl.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+Verifying device connection...
+Device connection verified
+formatted message: Va rugam sa confirmati comanda cu 'da' sau 'nu'.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+User +40774463442 sent order, awaiting confirmation
+Received SMS from: +40774463442 at 1741366760000 with message: da
+Cleared existing session timeout for +40774463442
+Cleared existing reminder timeout for +40774463442
+Set session timeout and reminder timeout for +40774463442
+Verifying device connection...
+Device connection verified
+formatted message: Comanda dumneavoastra a fost confirmata si va fi procesata. Va multumim!
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+Cleared session timeout for +40774463442 in endSession
+Cleared reminder timeout for +40774463442 in endSession
+Verifying device connection...
+Device connection verified
+formatted message: Aceasta sesiune a fost inchisa. Va rugam sa trimiteti un mesaj cu /start pentru a incepe o noua sesiune.
+SMS sent via ADB: Result: Parcel(00000000    '....')
+
+Ended session for +40774463442
+User +40774463442 confirmed order, session ended
+Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"contacts":[{"profile":{"name":"raymond"},"wa_id":"40774463442"}],"messages":[{"from":"40774463442","id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgASGBQzQTI4MTdEMTFGRjlDOTg4ODRBOQA=","timestamp":"1741366780","text":{"body":"/start"},"type":"text"}]},"field":"messages"}]}]} + "
+"Initialized state for new user 40774463442
+Set session timeout and reminder timeout for 40774463442
+User 40774463442 sent /start, proceeding to initial state
+User 40774463442 verified, awaiting order
+Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"statuses":[{"id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgARGBI0RDkzOTNBREVBM0Q2RUU0MkUA","status":"sent","timestamp":"1741366781","recipient_id":"40774463442","conversation":{"id":"d6756be12a8aa8dc386a6c71c0939e3b","expiration_timestamp":"1741450020","origin":{"type":"service"}},"pricing":{"billable":true,"pricing_model":"CBP","category":"service"}}]},"field":"messages"}]}]} + "
+"Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"statuses":[{"id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgARGBI0RDkzOTNBREVBM0Q2RUU0MkUA","status":"delivered","timestamp":"1741366781","recipient_id":"40774463442","conversation":{"id":"d6756be12a8aa8dc386a6c71c0939e3b","origin":{"type":"service"}},"pricing":{"billable":true,"pricing_model":"CBP","category":"service"}}]},"field":"messages"}]}]} + "
+"Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"statuses":[{"id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgARGBI3QzU2NDY1NUQzRENFMThCRDEA","status":"sent","timestamp":"1741366782","recipient_id":"40774463442","conversation":{"id":"d6756be12a8aa8dc386a6c71c0939e3b","expiration_timestamp":"1741450020","origin":{"type":"service"}},"pricing":{"billable":true,"pricing_model":"CBP","category":"service"}}]},"field":"messages"}]}]} + "
+"Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"statuses":[{"id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgARGBI0RDkzOTNBREVBM0Q2RUU0MkUA","status":"delivered","timestamp":"1741366782","recipient_id":"40774463442","conversation":{"id":"d6756be12a8aa8dc386a6c71c0939e3b","origin":{"type":"service"}},"pricing":{"billable":true,"pricing_model":"CBP","category":"service"}}]},"field":"messages"}]}]} + "
+"Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"statuses":[{"id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgARGBI0RDkzOTNBREVBM0Q2RUU0MkUA","status":"read","timestamp":"1741366782","recipient_id":"40774463442"}]},"field":"messages"}]}]} + "
+"Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"statuses":[{"id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgARGBI3QzU2NDY1NUQzRENFMThCRDEA","status":"delivered","timestamp":"1741366782","recipient_id":"40774463442","conversation":{"id":"d6756be12a8aa8dc386a6c71c0939e3b","origin":{"type":"service"}},"pricing":{"billable":true,"pricing_model":"CBP","category":"service"}}]},"field":"messages"}]}]} + "
+"Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"statuses":[{"id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgARGBI3QzU2NDY1NUQzRENFMThCRDEA","status":"delivered","timestamp":"1741366782","recipient_id":"40774463442","conversation":{"id":"d6756be12a8aa8dc386a6c71c0939e3b","origin":{"type":"service"}},"pricing":{"billable":true,"pricing_model":"CBP","category":"service"}}]},"field":"messages"}]}]} + "
+"Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"statuses":[{"id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgARGBI3QzU2NDY1NUQzRENFMThCRDEA","status":"read","timestamp":"1741366782","recipient_id":"40774463442"}]},"field":"messages"}]}]} + "
+"Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"contacts":[{"profile":{"name":"raymond"},"wa_id":"40774463442"}],"messages":[{"from":"40774463442","id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgASGBQzQUEwNDQwRDdGRDJBQTkwQjZDQwA=","timestamp":"1741366788","text":{"body":"20 ouă xl"},"type":"text"}]},"field":"messages"}]}]} + "
+"Cleared existing session timeout for 40774463442
+Cleared existing reminder timeout for 40774463442
+Set session timeout and reminder timeout for 40774463442
+User 40774463442 sent order, awaiting confirmation
+Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"statuses":[{"id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgARGBIzRDUwMDYyMUNGMzlFM0Q4OTAA","status":"sent","timestamp":"1741366789","recipient_id":"40774463442","conversation":{"id":"d6756be12a8aa8dc386a6c71c0939e3b","expiration_timestamp":"1741450020","origin":{"type":"service"}},"pricing":{"billable":true,"pricing_model":"CBP","category":"service"}}]},"field":"messages"}]}]} + "
+"Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"statuses":[{"id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgARGBIzRDUwMDYyMUNGMzlFM0Q4OTAA","status":"delivered","timestamp":"1741366789","recipient_id":"40774463442","conversation":{"id":"d6756be12a8aa8dc386a6c71c0939e3b","origin":{"type":"service"}},"pricing":{"billable":true,"pricing_model":"CBP","category":"service"}}]},"field":"messages"}]}]} + "
+"Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"statuses":[{"id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgARGBIzRDUwMDYyMUNGMzlFM0Q4OTAA","status":"delivered","timestamp":"1741366790","recipient_id":"40774463442","conversation":{"id":"d6756be12a8aa8dc386a6c71c0939e3b","origin":{"type":"service"}},"pricing":{"billable":true,"pricing_model":"CBP","category":"service"}}]},"field":"messages"}]}]} + "
+"Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"statuses":[{"id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgARGBIzRDUwMDYyMUNGMzlFM0Q4OTAA","status":"read","timestamp":"1741366790","recipient_id":"40774463442"}]},"field":"messages"}]}]} + "
+"Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"statuses":[{"id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgARGBI0MDFGN0FBODc2NDIzMDlGMUEA","status":"delivered","timestamp":"1741366790","recipient_id":"40774463442","conversation":{"id":"d6756be12a8aa8dc386a6c71c0939e3b","origin":{"type":"service"}},"pricing":{"billable":true,"pricing_model":"CBP","category":"service"}}]},"field":"messages"}]}]} + "
+"Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"statuses":[{"id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgARGBI0MDFGN0FBODc2NDIzMDlGMUEA","status":"read","timestamp":"1741366790","recipient_id":"40774463442"}]},"field":"messages"}]}]} + "
+"Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"statuses":[{"id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgARGBI0MDFGN0FBODc2NDIzMDlGMUEA","status":"sent","timestamp":"1741366790","recipient_id":"40774463442","conversation":{"id":"d6756be12a8aa8dc386a6c71c0939e3b","expiration_timestamp":"1741450020","origin":{"type":"service"}},"pricing":{"billable":true,"pricing_model":"CBP","category":"service"}}]},"field":"messages"}]}]} + "
+"Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"contacts":[{"profile":{"name":"raymond"},"wa_id":"40774463442"}],"messages":[{"from":"40774463442","id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgASGBQzQUYyNEI1M0UzOUFFMDU5QzlCQQA=","timestamp":"1741366792","text":{"body":"da"},"type":"text"}]},"field":"messages"}]}]} + "
+"Cleared existing session timeout for 40774463442
+Cleared existing reminder timeout for 40774463442
+Set session timeout and reminder timeout for 40774463442
+Cleared session timeout for 40774463442 in endSession
+Cleared reminder timeout for 40774463442 in endSession
+Ended session for 40774463442
+User 40774463442 confirmed order, session ended
+Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"statuses":[{"id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgARGBI4NEU4MzE3NkU1MjhFMkZDQ0UA","status":"sent","timestamp":"1741366794","recipient_id":"40774463442","conversation":{"id":"d6756be12a8aa8dc386a6c71c0939e3b","expiration_timestamp":"1741450020","origin":{"type":"service"}},"pricing":{"billable":true,"pricing_model":"CBP","category":"service"}}]},"field":"messages"}]}]} + "
+"Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"statuses":[{"id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgARGBI4NEU4MzE3NkU1MjhFMkZDQ0UA","status":"delivered","timestamp":"1741366794","recipient_id":"40774463442","conversation":{"id":"d6756be12a8aa8dc386a6c71c0939e3b","origin":{"type":"service"}},"pricing":{"billable":true,"pricing_model":"CBP","category":"service"}}]},"field":"messages"}]}]} + "
+"Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"statuses":[{"id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgARGBI4NEU4MzE3NkU1MjhFMkZDQ0UA","status":"delivered","timestamp":"1741366794","recipient_id":"40774463442","conversation":{"id":"d6756be12a8aa8dc386a6c71c0939e3b","origin":{"type":"service"}},"pricing":{"billable":true,"pricing_model":"CBP","category":"service"}}]},"field":"messages"}]}]} + "
+"Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"statuses":[{"id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgARGBI4NEU4MzE3NkU1MjhFMkZDQ0UA","status":"read","timestamp":"1741366794","recipient_id":"40774463442"}]},"field":"messages"}]}]} + "
+"Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"statuses":[{"id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgARGBIwRDcyMjQzOTI1MENFRTY4ODYA","status":"sent","timestamp":"1741366794","recipient_id":"40774463442","conversation":{"id":"d6756be12a8aa8dc386a6c71c0939e3b","expiration_timestamp":"1741450020","origin":{"type":"service"}},"pricing":{"billable":true,"pricing_model":"CBP","category":"service"}}]},"field":"messages"}]}]} + "
+"Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"statuses":[{"id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgARGBIwRDcyMjQzOTI1MENFRTY4ODYA","status":"delivered","timestamp":"1741366795","recipient_id":"40774463442","conversation":{"id":"d6756be12a8aa8dc386a6c71c0939e3b","origin":{"type":"service"}},"pricing":{"billable":true,"pricing_model":"CBP","category":"service"}}]},"field":"messages"}]}]} + "
+"Incoming webhook message: {"object":"whatsapp_business_account","entry":[{"id":"594001683790323","changes":[{"value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"15551723804","phone_number_id":"599613009893141"},"statuses":[{"id":"wamid.HBgLNDA3NzQ0NjM0NDIVAgARGBIwRDcyMjQzOTI1MENFRTY4ODYA","status":"read","timestamp":"1741366795","recipient_id":"40774463442"}]},"field":"messages"}]}]} + "
+"
