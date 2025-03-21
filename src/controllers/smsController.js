@@ -12,14 +12,12 @@ export async function handleSMS(req, res) {
       
 
       const { from, text, sentStamp } = req.body;
-      const fromStr = String(from);
-      fromStr.replace("+", "");
-      const textStr = String(text);
+
       
   
       logStream.write(`Received SMS from: ${from} at ${sentStamp} with message: ${text}\n`);
 
-      handleUserInteraction(fromStr, textStr, "sms");
+      handleUserInteraction(String(from).replace("+", ""), text, "sms");
   
       res.status(200).send("Webhook received successfully");
     } catch (error) {

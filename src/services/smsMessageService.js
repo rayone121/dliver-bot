@@ -3,7 +3,7 @@ import { MessageServiceInterface} from './messageServiceInterface.js';
 import { exec } from 'child_process';
 import util from 'util';
 import { logStream } from '../server.js';
-import { log } from 'console';
+
 
 const execPromise = util.promisify(exec);
 

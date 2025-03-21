@@ -1,50 +1,54 @@
-import { getUser, checkVatNumber, updatePhone } from "./clientService.js";
-import { logStream } from "../server.js";
-import { WhatsAppMessageService, whatsappService } from "./whatsappMessageService.js";
-import { adbSmsService, AdbSmsService } from "./smsMessageService.js";
-
-// ...existing code...
+import { getUser, checkVatNumber, updatePhone,getClientName,getClientNameByPhone } from "./clientService.js";
+import { logStream } from "../server.js"; 
+import { whatsappService } from "./whatsappMessageService.js"; 
+import { adbSmsService} from "./smsMessageService.js"; 
 
 const userStates = {};
 const SESSION_TIMEOUT = 60 * 60 * 1000; // 30 seconds
 const REMINDER_TIMEOUT = 30 * 60 * 1000; // 25 seconds
 
-function setSessionTimeout(userPhone, messageService) {
-    if (userStates[userPhone].timeout) {
-        clearTimeout(userStates[userPhone].timeout);
-        logStream.write(`Cleared existing session timeout for ${userPhone}\n`);
+// Updated setSessionTimeout to use userKey
+function setSessionTimeout(userKey, messageService) {
+    const userState = userStates[userKey];
+    if (userState.timeout) {
+        clearTimeout(userState.timeout);
+        logStream.write(`Cleared existing session timeout for ${userKey}\n`);
     }
-    if (userStates[userPhone].reminderTimeout) {
-        clearTimeout(userStates[userPhone].reminderTimeout);
-        logStream.write(`Cleared existing reminder timeout for ${userPhone}\n`);
+    if (userState.reminderTimeout) {
+        clearTimeout(userState.reminderTimeout);
+        logStream.write(`Cleared existing reminder timeout for ${userKey}\n`);
     }
 
-    userStates[userPhone].reminderTimeout = setTimeout(async () => {
-        await messageService.sendMessage(userPhone, "Your session will expire in 30 minutes. Please complete your interaction.");
-        logStream.write(`Sent reminder message to ${userPhone}\n`);
+    userState.reminderTimeout = setTimeout(async () => {
+        await messageService.sendMessage(userState.phone, "Your session will expire in 30 minutes. Please complete your interaction.");
+        logStream.write(`Sent reminder message to ${userState.phone}\n`);
     }, REMINDER_TIMEOUT);
 
-    userStates[userPhone].timeout = setTimeout(async () => {
-        await endSession(userPhone, messageService);
-        logStream.write(`Session timeout occurred for ${userPhone}\n`);
+    userState.timeout = setTimeout(async () => {
+        await endSession(userKey, messageService);
+        logStream.write(`Session timeout occurred for ${userKey}\n`);
     }, SESSION_TIMEOUT);
 
-    logStream.write(`Set session timeout and reminder timeout for ${userPhone}\n`);
+    logStream.write(`Set session timeout and reminder timeout for ${userKey}\n`);
 }
 
-async function endSession(userPhone, messageService) {
-    if (userStates[userPhone].timeout) {
-        clearTimeout(userStates[userPhone].timeout);
-        logStream.write(`Cleared session timeout for ${userPhone} in endSession\n`);
+// Updated endSession to use userKey
+async function endSession(userKey, messageService) {
+    const userState = userStates[userKey];
+    if (userState.timeout) {
+        clearTimeout(userState.timeout);
+        logStream.write(`Cleared session timeout for ${userKey} in endSession\n`);
     }
-    if (userStates[userPhone].reminderTimeout) {
-        clearTimeout(userStates[userPhone].reminderTimeout);
-        logStream.write(`Cleared reminder timeout for ${userPhone} in endSession\n`);
+    if (userState.reminderTimeout) {
+        clearTimeout(userState.reminderTimeout);
+        logStream.write(`Cleared reminder timeout for ${userKey} in endSession\n`);
     }
-    await messageService.sendMessage(userPhone, "Aceasta sesiune a fost inchisa. Va rugam sa trimiteti un mesaj cu /start pentru a incepe o noua sesiune.");
-    delete userStates[userPhone];
-    logStream.write(`Ended session for ${userPhone}\n`);
+    await messageService.sendMessage(userState.phone, "Aceasta sesiune a fost inchisa...");
+    delete userStates[userKey];
+    logStream.write(`Ended session for ${userKey}\n`);
 }
+
+
 
 export async function handleUserInteraction(userPhone, userMessage, platform) {
     let messageService;
@@ -56,13 +60,20 @@ export async function handleUserInteraction(userPhone, userMessage, platform) {
         throw new Error('Invalid platform');
     }
 
-    if (!userStates[userPhone]) {
-        userStates[userPhone] = { state: 'start' };
-        logStream.write(`Initialized state for new user ${userPhone}\n`);
+    // 🎯 Key change: Combine phone and platform for session key
+    const userKey = `${userPhone}-${platform}`;
+    
+    if (!userStates[userKey]) {
+        userStates[userKey] = { 
+            state: 'start',
+            phone: userPhone, // Store phone for messaging
+            platform: platform
+        };
+        logStream.write(`Initialized state for new user ${userKey}\n`);
     }
 
-    const userState = userStates[userPhone];
-    setSessionTimeout(userPhone, messageService);
+    const userState = userStates[userKey];
+    setSessionTimeout(userKey, messageService); // Pass userKey instead of phone
 
     try {
         switch (userState.state) {
@@ -70,68 +81,57 @@ export async function handleUserInteraction(userPhone, userMessage, platform) {
                 if (userMessage === '/start') {
                     userState.state = 'initial';
                     await messageService.sendMessage(userPhone, "Bine ati venit! Va rugam asteptati pana la verificarea numarului de telefon.");
-                    logStream.write(`User ${userPhone} sent /start, proceeding to initial state\n`);
 
-                    // Automatically proceed to the next state
-                    const user = await getUser(userPhone);
+                    const user = await getUser(userState.phone);
                     if (!user) {
                         userState.state = 'awaitingVat';
                         await messageService.sendMessage(userPhone, "Numarul de telefon nu a fost identificat in baza noastra de date. Va rugam sa introduceti codul fiscal. (Exemplu: ROXXXXXXX sau XXXXXXX).");
-                        logStream.write(`User ${userPhone} not found, awaiting VAT number\n`);
                     } else {
+                        const clientName = await getClientNameByPhone(userState.phone);
                         userState.state = 'verified';
-                        await messageService.sendMessage(userPhone, "Sunteti deja verificat. Va rugam sa trimiteti comanda.");
-                        logStream.write(`User ${userPhone} verified, awaiting order\n`);
+                        await messageService.sendMessage(userPhone, `Bun venit, ${clientName}! Numarul dumneavoastra de telefon a fost verificat. Va rugam sa trimiteti comanda.`); 
                     }
-                } else {
-                    await messageService.sendMessage(userPhone, "Pentru a incepe, va rugam sa trimiteti un mesaj cu /start.");
-                    logStream.write(`User ${userPhone} sent invalid start message\n`);
                 }
-                break;
-            case 'awaitingVat':
-                const vatNumber = userMessage;
-                const vatUser = await checkVatNumber(vatNumber);
-                if (vatUser) {
-                    await updatePhone(userPhone, vatUser.vat);
-                    userState.state = 'verified';
-                    await messageService.sendMessage(userPhone, "Verificare reusita. Va rugam sa trimiteti comanda.");
-                    logStream.write(`User ${userPhone} VAT verified, awaiting order\n`);
-                } else {
-                    await messageService.sendMessage(userPhone, "Cod fiscal invalid. Va rugam sa incercati din nou.");
-                    logStream.write(`User ${userPhone} sent invalid VAT number\n`);
+                else {
+                    await messageService.sendMessage(userPhone, "Va rugam sa trimiteti /start pentru a incepe.");
                 }
                 break;
 
+            case 'awaitingVat':
+                const vatUser = await checkVatNumber(userMessage);
+                if(Object.keys(vatUser).length === 0){
+                    await messageService.sendMessage(userState.phone, "Codul fiscal nu a fost gasit in baza noastra de date. Va rugam sa introduceti un cod fiscal valid.");
+                    break;
+                }
+                const ClientName = await getClientName(vatUser.vat);
+                await updatePhone(userState.phone, vatUser.vat);
+                userState.state = 'verified';
+                await messageService.sendMessage(userState.phone, `Bun venit, ${ClientName}! Numarul dumneavoastra de telefon a fost verificat. Va rugam sa trimiteti comanda.`);
+                break;
             case 'verified':
                 userState.state = 'awaitingConfirmation';
                 userState.order = userMessage;
-                await messageService.sendMessage(userPhone, "Comanda dumneavoastra este: " + userMessage + ".");
-                await messageService.sendMessage(userPhone, "Va rugam sa confirmati comanda cu 'da' sau 'nu'.");
-                logStream.write(`User ${userPhone} sent order, awaiting confirmation\n`);
+                await messageService.sendMessage(userState.phone, `Comanda dumneavoastra este: ${userMessage}. Confirmati comanda? (da/nu)`);
                 break;
 
             case 'awaitingConfirmation':
                 if (userMessage === 'da') {
                     await messageService.sendMessage(userPhone, "Comanda dumneavoastra a fost confirmata si va fi procesata. Va multumim!");
-                    await endSession(userPhone, messageService);
-                    logStream.write(`User ${userPhone} confirmed order, session ended\n`);
+                    await endSession(userKey, messageService);
+                    break;
                 } else if (userMessage === 'nu') {
                     userState.state = 'verified';
                     await messageService.sendMessage(userPhone, "Comanda dumneavoastra a fost anulata. Va rugam sa trimiteti o noua comanda.");
-                    logStream.write(`User ${userPhone} canceled order, awaiting new order\n`);
-                } else {
-                    await messageService.sendMessage(userPhone, "Va rugam sa confirmati comanda cu 'da' sau 'nu'.");
-                    logStream.write(`User ${userPhone} sent invalid confirmation\n`);
+                    break;
                 }
+                await messageService.sendMessage(userPhone, "Va rugam sa raspundeti cu 'da' sau 'nu'.");
                 break;
 
             default:
-                await messageService.sendMessage(userPhone, "Ceva nu a mers bine. Va rugam sa incercati din nou.");
-                logStream.write(`User ${userPhone} in unknown state\n`);
-                break;
+                await messageService.sendMessage(userState.phone, "Ceva nu a mers bine...");
         }
     } catch (error) {
-        logStream.write(`Error handling user interaction for ${userPhone}: ${error}\n`);
-        await messageService.sendMessage(userPhone, "Ceva nu a mers bine. Va rugam sa incercati din nou.");
+        logStream.write(`Error handling user interaction for ${userKey}: ${error}\n`);
+        await messageService.sendMessage(userState.phone, "Ceva nu a mers bine...");
     }
 }

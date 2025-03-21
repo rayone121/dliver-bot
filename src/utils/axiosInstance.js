@@ -7,7 +7,7 @@ dotenv.config();
 const {GRAPH_API_TOKEN} = process.env;
 
 const apiClient = axios.create({
-  baseURL: "https://graph.facebook.com/v18.0",
+  baseURL: "https://graph.facebook.com/v22.0",
   headers: {
     Authorization: `Bearer ${GRAPH_API_TOKEN}`,
   },
