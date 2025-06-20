@@ -1,76 +1,108 @@
 // services/clientService.js
-import dbPromise from "../utils/db.js";
-import { logStream } from "../server.js";
+import { pb } from "../pocketbase.js";
+import { logWithUI } from "../utils/logger.js";
 
+/**
+ * Check if a phone number exists in the database
+ * @param {string} phone - The phone number to check
+ * @returns {Promise<boolean>} - Whether the phone number exists
+ */
 export async function getUser(phone) {
-    const conn = await dbPromise.getConnection();
-    try {
-      const response = await conn.query(
-        "SELECT vat FROM clients WHERE phone LIKE ?", [`%${phone}%`]
-      );
-      return response[0] !== undefined;
-    } catch (error) {
-      logStream.write(`Database error: ${error}\n`);
-      throw error;
-    } finally {
-        if (conn) conn.release();
-    }
+  try {
+    const cleanPhone = cleanPhoneNumber(phone);
+    logWithUI(`Checking if user exists with phone: ${cleanPhone}`);
+
+    const records = await pb.collection("clients").getList(1, 1, {
+      filter: `phone ~ "${cleanPhone}"`,
+    });
+
+    return records.items.length > 0 ? records.items[0] : null;
+  } catch (error) {
+    logWithUI(`PocketBase error in getUser: ${error.message}`);
+    throw error;
   }
+}
 
-
+/**
+ * Check if a VAT number exists in the database
+ * @param {string} vatNumber - The VAT number to check
+ * @returns {Promise<Object>} - The client with the VAT number
+ */
 export async function checkVatNumber(vatNumber) {
-  const conn = await dbPromise.getConnection();
   try {
-    logStream.write(`Checking VAT number: ${vatNumber}\n`);
-    const [response] = await conn.query("SELECT * FROM clients WHERE vat LIKE ?", [`%${vatNumber}%`]);
-    return response ? response : {};
+    logWithUI(`Checking VAT number: ${vatNumber}`);
+
+    const records = await pb.collection("clients").getList(1, 1, {
+      filter: `vat ~ "${vatNumber}"`,
+    });
+
+    return records.items.length > 0 ? records.items[0] : {};
   } catch (error) {
-    logStream.write(`Database error: ${error}\n`);
+    logWithUI(`PocketBase error in checkVatNumber: ${error.message}`);
     throw error;
-  } finally {
-    if (conn) conn.release();
   }
 }
 
+/**
+ * Get a client's name by VAT number
+ * @param {string} vatNumber - The VAT number
+ * @returns {Promise<string>} - The client's name
+ */
 export async function getClientName(vatNumber) {
-  const conn = await dbPromise.getConnection();
   try {
-    logStream.write(`Getting client name for VAT: ${vatNumber}\n`);
-    const [response] = await conn.query("SELECT name FROM clients WHERE vat LIKE ?", [`%${vatNumber}%`]);
-    return response.name;
-  }
-  catch (error) {
-    logStream.write(`Database error: ${error}\n`);
-    throw error;
-  } finally {
-    if (conn) conn.release();
-  }
-}
+    logWithUI(`Getting client name for VAT: ${vatNumber}`);
 
-export async function getClientNameByPhone(phone) {
-  const conn = await dbPromise.getConnection();
-  try {
-    logStream.write(`Getting client name for phone: ${phone}\n`);
-    const [response] = await conn.query("SELECT name FROM clients WHERE phone LIKE ?", [`%${phone}%`]);
-    return response.name;
-  }
-  catch (error) {
-    logStream.write(`Database error: ${error}\n`);
-    throw error;
-  } finally {
-    if (conn) conn.release();
-  }
-}
+    const records = await pb.collection("clients").getList(1, 1, {
+      filter: `vat ~ "${vatNumber}"`,
+    });
 
-export async function updatePhone(phone, vat) {
-  const conn = await dbPromise.getConnection();
-  try {
-    logStream.write(`Updating phone number: ${phone} for VAT: ${vat}\n`);
-    await conn.query("UPDATE clients SET phone = ? WHERE vat LIKE ?", [phone, `%${vat}%`]);
+    return records.items.length > 0 ? records.items[0].name : null;
   } catch (error) {
-    logStream.write(`Database error: ${error}\n`);
+    logWithUI(`PocketBase error in getClientName: ${error.message}`);
     throw error;
-  } finally {
-    if (conn) conn.release();
   }
+}
+
+/**
+ * Update a client's phone number
+ * @param {string} phone - The phone number
+ * @param {string} vat - The VAT number
+ * @returns {Promise<void>}
+ */
+export async function updatePhone(phone, vat) {
+  try {
+    const cleanPhone = cleanPhoneNumber(phone);
+    logWithUI(`Updating phone number: ${cleanPhone} for VAT: ${vat}`);
+
+    // First, find the client record
+    const records = await pb.collection("clients").getList(1, 1, {
+      filter: `vat ~ "${vat}"`,
+    });
+
+    if (records.items.length > 0) {
+      const client = records.items[0];
+
+      // Update the client's phone number
+      await pb.collection("clients").update(client.id, {
+        phone: cleanPhone,
+      });
+
+      logWithUI(`Phone number updated successfully for VAT: ${vat}`);
+    } else {
+      logWithUI(`No client found with VAT: ${vat}`);
+    }
+  } catch (error) {
+    logWithUI(`PocketBase error in updatePhone: ${error.message}`);
+    throw error;
+  }
+}
+
+/**
+ * Clean a phone number to ensure consistent format
+ * @param {string} phone - Phone number to clean
+ * @returns {string} - Cleaned phone number
+ */
+function cleanPhoneNumber(phone) {
+  // Remove any non-digit characters
+  return phone.replace(/\D/g, "");
 }

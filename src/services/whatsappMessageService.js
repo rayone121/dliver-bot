@@ -1,6 +1,7 @@
 // services/whatsappService.js
 import apiClient from "../utils/axiosInstance.js";
 import { MessageServiceInterface } from "./messageServiceInterface.js";
+import { log } from "../utils/logger.js";
 
 export class WhatsAppMessageService extends MessageServiceInterface {
   constructor() {
@@ -17,7 +18,7 @@ export class WhatsAppMessageService extends MessageServiceInterface {
       });
       return response.data; // Good practice to return response
     } catch (error) {
-      console.error("WhatsApp API Error:", error.response?.data || error.message);
+      log(`WhatsApp API Error: ${error.response?.data || error.message}`);
       throw error; // Maintain error propagation
     }
   }

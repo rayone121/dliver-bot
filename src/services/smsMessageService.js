@@ -1,9 +1,8 @@
 // services/adbSmsService.js
-import { MessageServiceInterface} from './messageServiceInterface.js';
-import { exec } from 'child_process';
-import util from 'util';
-import { logStream } from '../server.js';
-
+import { MessageServiceInterface } from "./messageServiceInterface.js";
+import { exec } from "child_process";
+import util from "util";
+import { logWithUI } from "../utils/logger.js";
 
 const execPromise = util.promisify(exec);
 
@@ -15,36 +14,49 @@ export class AdbSmsService extends MessageServiceInterface {
 
   async sendMessage(phoneNumber, message) {
     try {
-      logStream.write('Verifying device connection...\n');
       await this.verifyDeviceConnection();
-      logStream.write('Device connection verified\n');  
-  
-      const formattedMessage = message.replace(/"/g, '\\"');
-      logStream.write(`formatted message: ${formattedMessage}\n`);
-      const { stdout, stderr } = await execPromise(`
-       adb shell service call isms 7 i32 0 s16 "com.android.mms.service" s16 "${phoneNumber}" s16 null s16 '"${formattedMessage}"' s16 null s16 null
-    `);
-  
-      if (stderr) {
-        logStream.write(`Error sending SMS via ADB: ${stderr}\n`);
-        throw new Error(stderr);
-      }
-      logStream.write(`SMS sent via ADB: ${stdout}\n`);
+
+      const formattedPhone = phoneNumber.startsWith("+")
+        ? phoneNumber
+        : `+${phoneNumber}`;
+      const escapedMessage = message
+        .replace(/\\/g, "\\\\")
+        .replace(/ /g, "\\ ")
+        .replace(/"/g, '\\"')
+        .replace(/'/g, "\\'")
+        .replace(/&/g, "\\&")
+        .replace(/\$/g, "\\$")
+        .replace(/`/g, "\\`")
+        .replace(/\(/g, "\\(")
+        .replace(/\)/g, "\\)")
+        .replace(/\n/g, "\\ ")
+        .replace(/\r/g, "");
+
+      const command = `adb shell am startservice --user 0 -n com.android.shellms/.sendSMS -e contact "${formattedPhone}" -e msg "${escapedMessage}"`;
+      logWithUI(`Executing command: ${command}`);
+
+      const { stdout, stderr } = await execPromise(command);
+      if (stderr) logWithUI(`Error: ${stderr}`);
       return stdout;
     } catch (error) {
-      logStream.write(`Error sending SMS via ADB: ${error}\n`);
-      throw new Error('Failed to send SMS via ADB');
+      logWithUI(`Error sending SMS via ADB: ${error}\n`);
+      throw new Error("Failed to send SMS via ADB");
     }
   }
 
   async verifyDeviceConnection() {
     try {
-      const { stdout } = await execPromise(`adb -s ${this.deviceIp} devices`);
-      if (!stdout.includes(this.deviceIp)) {
-        throw new Error('Device not connected');
+      const { stdout } = await execPromise(`adb devices`);
+      const match = stdout.match(
+        /([0-9]+\.[0-9]+\.[0-9]+\.[0-9]+:\d+)\s+device/,
+      );
+
+      this.deviceIp = this.deviceIp || (match && match[1]);
+      if (!this.deviceIp || !stdout.includes(this.deviceIp)) {
+        throw new Error(`Device ${this.deviceIp || "unknown"} not connected`);
       }
     } catch (error) {
-      throw new Error('ADB device verification failed');
+      throw new Error("ADB device verification failed");
     }
   }
 }

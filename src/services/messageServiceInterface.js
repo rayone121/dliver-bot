@@ -1,5 +1,6 @@
+// services/messageServiceInterface.js
 export class MessageServiceInterface {
-    async sendMessage(recipient, text) {
-      throw new Error("sendMessage method not implemented");
-    }
+  async sendMessage(recipient, text) {
+    throw new Error("sendMessage method not implemented");
   }
+}
