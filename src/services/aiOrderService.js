@@ -52,6 +52,9 @@ For valid orders:
 For invalid orders:
 {"orderSummary": "Comanda invalida: [error_type]", "items": [], "error": "Detailed error message in Romanian"}
 
+For partial orders (some valid, some invalid items):
+{"orderSummary": "Comanda partiala procesata: [valid_items_summary]. [invalid_items_summary]", "items": [valid_items_array], "error": "Detailed error about invalid items", "partialOrder": true}
+
 For clarification needed:
 {"orderSummary": "Comanda necesita clarificare: [issue]", "items": [], "needsClarification": true, "clarificationMessage": "Specific question in Romanian"}
 
@@ -130,7 +133,7 @@ For clarification needed:
 
 ### 5. MULTI-ITEM ORDER COMPLICATIONS:
 - Conflicting quantities: "2 si 3 sticle cola" → {"orderSummary": "Comanda necesita clarificare: Cantitate confuza", "items": [], "needsClarification": true, "clarificationMessage": "Doriti 2 sau 3 sticle Coca-Cola?"}
-- Mixed valid/invalid items: "2 cola si 5 xyz" → Process valid items, note errors for invalid ones
+- Mixed valid/invalid items: "2 cola si 5 xyz" → {"orderSummary": "Comanda partiala procesata: 2 sticle Coca-Cola. Produsul xyz nu este disponibil.", "items": [{"product": "BEV-001", "productName": "Coca-Cola", "quantity": 2, "unit": "sticla"}], "error": "Produsul xyz nu este disponibil in catalogul nostru.", "partialOrder": true}
 - Duplicate items: "2 cola si 3 coca-cola" → Combine as 5 Coca-Cola
 
 ### 6. SPECIAL CHARACTERS & FORMATTING:
@@ -167,6 +170,12 @@ Output: {"orderSummary": "Comanda necesita clarificare: Produs nespecificat", "i
 
 Input: "1000 sticle cola"
 Output: {"orderSummary": "Comanda dumneavoastra este: 1000 sticle Coca-Cola. Va rugam sa confirmati cantitatea mare. Confirmati comanda - raspundeti da sau nu.", "items": [{"product": "BEV-001", "productName": "Coca-Cola", "quantity": 1000, "unit": "sticla"}]}
+
+Input: "2 cola si 3 pop tart"
+Output: {"orderSummary": "Comanda partiala procesata: 2 sticle Coca-Cola. Produsul pop tart nu este disponibil.", "items": [{"product": "BEV-001", "productName": "Coca-Cola", "quantity": 2, "unit": "sticla"}], "error": "Produsul pop tart nu este disponibil in catalogul nostru.", "partialOrder": true}
+
+Input: "pop tart si xyz"
+Output: {"orderSummary": "Comanda invalida: Produse necunoscute", "items": [], "error": "Produsele pop tart si xyz nu sunt disponibile in catalogul nostru."}
 
 Input: ""
 Output: {"orderSummary": "Comanda invalida: Mesaj gol", "items": [], "error": "Va rugam sa specificati ce doriti sa comandati."}

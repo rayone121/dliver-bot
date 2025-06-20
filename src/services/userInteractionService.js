@@ -148,6 +148,78 @@ export async function handleUserInteraction(userPhone, userMessage, platform) {
             availableProducts,
           );
 
+          // Handle AI error responses first
+          if (aiResult.error) {
+            // Check if this is a partial order (has both valid items and errors)
+            if (aiResult.partialOrder && aiResult.items && aiResult.items.length > 0) {
+              // This is a mixed order with some valid and some invalid items
+              logWithUI(`AI detected partial order for ${userKey}: ${aiResult.items.length} valid items, error: ${aiResult.error}`);
+              
+              // Validate the valid items from the partial order
+              const validation = await validateOrderItems(
+                aiResult.items,
+                availableProducts,
+              );
+
+              if (validation.isValid) {
+                // Process the valid items and inform about invalid ones
+                const orderData = {
+                  originalOrder: userMessage,
+                  processedOrder: aiResult,
+                  validatedItems: validation.validatedItems,
+                  isPartialOrder: true,
+                };
+                
+                await updateSessionState(userKey, "awaitingConfirmation", {
+                  order: JSON.stringify(orderData),
+                });
+
+                // Combine orderSummary and error for comprehensive feedback
+                let message = aiResult.orderSummary;
+                if (aiResult.error && aiResult.error !== aiResult.orderSummary) {
+                  message += `\n\n${aiResult.error}`;
+                }
+                message += "\n\nConfirmati comanda pentru produsele disponibile? (da/nu)";
+
+                await safeSendMessage(
+                  messageService,
+                  userPhone,
+                  message,
+                );
+              } else {
+                // Even the "valid" items failed validation
+                logWithUI(`Partial order validation failed for ${userKey}: ${validation.errors.join(", ")}`);
+                let errorMessage = aiResult.orderSummary || "Eroare la procesarea comenzii";
+                if (aiResult.error) {
+                  errorMessage += `\n\n${aiResult.error}`;
+                }
+                
+                await safeSendMessage(
+                  messageService,
+                  userPhone,
+                  errorMessage,
+                );
+              }
+            } else {
+              // Pure error case - no valid items
+              logWithUI(`AI detected error for ${userKey}: ${aiResult.error}`);
+              
+              // Combine orderSummary and error for comprehensive feedback
+              let errorMessage = aiResult.orderSummary || "Eroare la procesarea comenzii";
+              if (aiResult.error && aiResult.error !== aiResult.orderSummary) {
+                errorMessage += `\n\nDetalii: ${aiResult.error}`;
+              }
+              
+              await safeSendMessage(
+                messageService,
+                userPhone,
+                errorMessage,
+              );
+            }
+            // Stay in verified state (for pure errors) or move to confirmation (for partial orders)
+            break;
+          }
+
           if (aiResult.needsClarification) {
             // AI needs clarification - stay in verified state
             await safeSendMessage(
@@ -196,17 +268,29 @@ export async function handleUserInteraction(userPhone, userMessage, platform) {
             );
           } else {
             // AI couldn't process the order or fallback mode
-            await updateSessionState(userKey, "awaitingConfirmation", {
-              originalOrder: userMessage,
-              processedOrder: aiResult,
-              fallbackMode: true,
-            });
+            if (aiResult.fallback) {
+              // This is a fallback response due to AI service unavailability
+              await updateSessionState(userKey, "awaitingConfirmation", {
+                originalOrder: userMessage,
+                processedOrder: aiResult,
+                fallbackMode: true,
+              });
 
-            await safeSendMessage(
-              messageService,
-              userPhone,
-              aiResult.orderSummary,
-            );
+              await safeSendMessage(
+                messageService,
+                userPhone,
+                aiResult.orderSummary,
+              );
+            } else {
+              // AI processed but returned no items - likely an error case
+              logWithUI(`AI returned no items for ${userKey}. Response: ${JSON.stringify(aiResult)}`);
+              await safeSendMessage(
+                messageService,
+                userPhone,
+                aiResult.orderSummary || "Nu am putut procesa comanda. Va rugam sa incercati din nou cu produse disponibile.",
+              );
+              // Stay in verified state to allow retry
+            }
           }
         } catch (error) {
           logWithUI(
@@ -261,8 +345,9 @@ export async function handleUserInteraction(userPhone, userMessage, platform) {
               orderData,
             );
 
-            let confirmationMessage =
-              "Comanda dumneavoastra a fost confirmata si va fi procesata. Va multumim!";
+            let confirmationMessage = sessionOrderData.isPartialOrder 
+              ? "Comanda partiala confirmata si va fi procesata. Va multumim!" 
+              : "Comanda dumneavoastra a fost confirmata si va fi procesata. Va multumim!";
 
             if (orderData.processedItems?.length > 0) {
               const totalItems = orderData.processedItems.reduce(
@@ -274,6 +359,10 @@ export async function handleUserInteraction(userPhone, userMessage, platform) {
                 0,
               );
               confirmationMessage += `\n\nRezumat: ${totalItems} articole, Total: ${totalPrice.toFixed(2)} RON`;
+              
+              if (sessionOrderData.isPartialOrder) {
+                confirmationMessage += "\n\nNota: Produsele indisponibile nu au fost incluse in comanda.";
+              }
             }
 
             await safeSendMessage(
