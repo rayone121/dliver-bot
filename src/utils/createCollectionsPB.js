@@ -302,7 +302,7 @@ async function setup() {
     // Authenticate admin
     console.log("Authenticating admin...");
     if (!POCKETBASE_ADMIN_EMAIL || !POCKETBASE_ADMIN_PASSWORD) {
-      console.error("❌ Admin credentials missing in .env file!");
+      console.error("Admin credentials missing in .env file!");
       process.exit(1);
     }
 
@@ -311,10 +311,10 @@ async function setup() {
         .collection("_superusers")
         .authWithPassword(POCKETBASE_ADMIN_EMAIL, POCKETBASE_ADMIN_PASSWORD);
     } catch (error) {
-      console.error("❌ Admin authentication failed:", error);
+      console.error("Admin authentication failed:", error);
       process.exit(1);
     }
-    console.log("✅ Authentication successful!");
+    console.log("Authentication successful!");
 
     // Get existing collections for checking
     const collections = await pb.collections.getFullList();
@@ -363,9 +363,9 @@ async function setup() {
             },
           ],
         });
-        console.log("✅ Clients collection created!");
+        console.log("Clients collection created!");
       } catch (error) {
-        console.error("❌ Failed to create clients collection:", error);
+        console.error("Failed to create clients collection:", error);
         if (error.response?.data) {
           console.error(
             "Error details:",
@@ -432,9 +432,9 @@ async function setup() {
             },
           ],
         });
-        console.log("✅ Products collection created!");
+        console.log("Products collection created!");
       } catch (error) {
-        console.error("❌ Failed to create products collection:", error);
+        console.error("Failed to create products collection:", error);
         if (error.response?.data) {
           console.error(
             "Error details:",
@@ -453,7 +453,7 @@ async function setup() {
 
     if (!clientsCollection) {
       console.error(
-        "❌ Clients collection not found but required for relations!",
+        "Clients collection not found but required for relations!",
       );
       process.exit(1);
     }
@@ -525,10 +525,10 @@ async function setup() {
             },
           ],
         });
-        console.log("✅ UserSessions collection created!");
+        console.log("UserSessions collection created!");
         console.log(`UserSessions collection ID: ${userSessionsCollection.id}`);
       } catch (error) {
-        console.error("❌ Failed to create userSessions collection:", error);
+        console.error("Failed to create userSessions collection:", error);
         if (error.response?.data) {
           console.error(
             "Error details:",
@@ -543,7 +543,7 @@ async function setup() {
     clientsCollection = updatedCollections.find((c) => c.name === "clients");
 
     if (!clientsCollection) {
-      console.error("❌ Clients collection not found for orders relation!");
+      console.error("Clients collection not found for orders relation!");
       process.exit(1);
     }
 
@@ -612,10 +612,10 @@ async function setup() {
             },
           ],
         });
-        console.log("✅ Orders collection created!");
+        console.log("Orders collection created!");
         console.log(`Orders collection ID: ${ordersCollection.id}`);
       } catch (error) {
-        console.error("❌ Failed to create orders collection:", error);
+        console.error("Failed to create orders collection:", error);
         if (error.response?.data) {
           console.error(
             "Error details:",
@@ -636,7 +636,7 @@ async function setup() {
 
       if (!productsCollection) {
         console.error(
-          "❌ Products collection not found - cannot add sample data!",
+          "Products collection not found - cannot add sample data!",
         );
       } else {
         let createdCount = 0;
@@ -652,19 +652,19 @@ async function setup() {
 
             if (existing.items.length > 0) {
               console.log(
-                `ℹ️ Product with SKU ${product.sku} already exists, skipping`,
+                `Product with SKU ${product.sku} already exists, skipping`,
               );
               skipCount++;
             } else {
               await pb.collection("products").create(product);
               console.log(
-                `✅ Created product: ${product.name} (${product.sku})`,
+                `Created product: ${product.name} (${product.sku})`,
               );
               createdCount++;
             }
           } catch (error) {
             console.error(
-              `❌ Failed to create product ${product.name}:`,
+              `Failed to create product ${product.name}:`,
               error,
             );
             errorCount++;
@@ -690,7 +690,7 @@ async function setup() {
 
     if (!clientsCollectionForData) {
       console.error(
-        "❌ Clients collection not found - cannot add sample data!",
+        "Clients collection not found - cannot add sample data!",
       );
     } else {
       let createdClientCount = 0;
@@ -706,16 +706,16 @@ async function setup() {
 
           if (existing.items.length > 0) {
             console.log(
-              `ℹ️ Client with VAT ${client.vat} already exists, skipping`,
+              `Client with VAT ${client.vat} already exists, skipping`,
             );
             skipClientCount++;
           } else {
             await pb.collection("clients").create(client);
-            console.log(`✅ Created client: ${client.name} (${client.vat})`);
+            console.log(`Created client: ${client.name} (${client.vat})`);
             createdClientCount++;
           }
         } catch (error) {
-          console.error(`❌ Failed to create client ${client.name}:`, error);
+          console.error(`Failed to create client ${client.name}:`, error);
           errorClientCount++;
         }
       }
@@ -726,12 +726,12 @@ async function setup() {
       console.log(`- Failed: ${errorClientCount}`);
     }
 
-    console.log("\n✅ Setup complete! Your DLiver-Bot collections are ready.");
+    console.log("\nSetup complete! Your DLiver-Bot collections are ready.");
     console.log(
       "Now you can run 'npm run export-training' to prepare data for the AI model.",
     );
   } catch (error) {
-    console.error("❌ Setup failed with error:", error);
+    console.error("Setup failed with error:", error);
     process.exit(1);
   }
 }

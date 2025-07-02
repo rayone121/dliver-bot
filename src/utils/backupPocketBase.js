@@ -77,7 +77,7 @@ async function createBackup(token) {
 
     return new Promise((resolve, reject) => {
       writer.on("finish", () => {
-        console.log(`✅ Backup created successfully at: ${backupPath}`);
+        console.log(`Backup created successfully at: ${backupPath}`);
         resolve(backupPath);
       });
       writer.on("error", (error) => {
@@ -102,7 +102,7 @@ async function runBackup() {
     const token = await authenticateAdmin();
     if (!token) {
       log(
-        "❌ Failed to authenticate. Please check your PocketBase admin credentials.",
+        "Failed to authenticate. Please check your PocketBase admin credentials.",
       );
       process.exit(1);
     }
@@ -111,11 +111,11 @@ async function runBackup() {
     const backupPath = await createBackup(token);
 
     if (backupPath) {
-      log(`✅ Backup created successfully at: ${backupPath}`);
+      log(`Backup created successfully at: ${backupPath}`);
       log("You can now proceed with applying migrations safely");
       process.exit(0);
     } else {
-      log("❌ Backup failed");
+      log("Backup failed");
       process.exit(1);
     }
   } catch (error) {

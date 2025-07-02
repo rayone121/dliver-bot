@@ -53,7 +53,7 @@ For invalid orders:
 {"orderSummary": "Comanda invalida: [error_type]", "items": [], "error": "Detailed error message in Romanian"}
 
 For partial orders (some valid, some invalid items):
-{"orderSummary": "Comanda partiala procesata: [valid_items_summary]. [invalid_items_summary]", "items": [valid_items_array], "error": "Detailed error about invalid items", "partialOrder": true}
+{"orderSummary": "Comanda partiala procesata: [valid_items_summary]", "items": [valid_items_array], "error": "Detailed error about invalid items", "partialOrder": true}
 
 For clarification needed:
 {"orderSummary": "Comanda necesita clarificare: [issue]", "items": [], "needsClarification": true, "clarificationMessage": "Specific question in Romanian"}
@@ -159,6 +159,7 @@ For clarification needed:
 
 ## EXAMPLES OF EDGE CASES:
 
+### BASIC EDGE CASES:
 Input: "cateva cola si niste paine"
 Output: {"orderSummary": "Comanda necesita clarificare: Cantitati nespecificate", "items": [], "needsClarification": true, "clarificationMessage": "Va rugam sa specificati exact: cate sticle Coca-Cola si cate pachete Paine Alba Feliata doriti"}
 
@@ -179,6 +180,72 @@ Output: {"orderSummary": "Comanda invalida: Produse necunoscute", "items": [], "
 
 Input: ""
 Output: {"orderSummary": "Comanda invalida: Mesaj gol", "items": [], "error": "Va rugam sa specificati ce doriti sa comandati."}
+
+### UNIT VALIDATION EDGE CASES:
+Input: "2 kg piept pui"
+Output: {"orderSummary": "Comanda dumneavoastra este: 2 kg Piept de Pui Dezosat. Confirmati comanda - raspundeti da sau nu.", "items": [{"product": "MEAT-001", "productName": "Piept de Pui Dezosat", "quantity": 2, "unit": "kg"}]}
+
+Input: "3 sticle piept pui"
+Output: {"orderSummary": "Comanda invalida: Unitate gresita", "items": [], "error": "Piept de Pui Dezosat se vinde la kg, nu la sticle."}
+
+Input: "5 bucati cartofi"
+Output: {"orderSummary": "Comanda invalida: Unitate gresita", "items": [], "error": "Cartofi Noi se vinde la kg, nu la bucati."}
+
+Input: "2 kg coca cola"
+Output: {"orderSummary": "Comanda invalida: Unitate gresita", "items": [], "error": "Coca-Cola se vinde la sticla, nu la kg."}
+
+Input: "1.5 kg carnati"
+Output: {"orderSummary": "Comanda dumneavoastra este: 1.5 kg Carnati Olteniesti. Confirmati comanda - raspundeti da sau nu.", "items": [{"product": "MEAT-002", "productName": "Cârnați Oltenești", "quantity": 1.5, "unit": "kg"}]}
+
+Input: "3 doze coca cola"
+Output: {"orderSummary": "Comanda necesita clarificare: Unitate gresita", "items": [], "needsClarification": true, "clarificationMessage": "Coca-Cola clasica se vinde la sticla. Doriti Coca-Cola Doza (BEV-007) sau Coca-Cola la sticla (BEV-001)?"}
+
+### AMBIGUOUS PRODUCT CASES:
+Input: "cola"
+Output: {"orderSummary": "Comanda necesita clarificare: Produs ambiguu", "items": [], "needsClarification": true, "clarificationMessage": "Avem Coca-Cola la sticla (5.99 RON) si Coca-Cola Doza (4.49 RON). Care preferati si cate?"}
+
+Input: "apa"
+Output: {"orderSummary": "Comanda necesita clarificare: Produs ambiguu", "items": [], "needsClarification": true, "clarificationMessage": "Avem Apa Plata Dorna (3.49 RON) si Apa Minerala Dorna (3.99 RON). Care preferati si cate sticle?"}
+
+Input: "suc"
+Output: {"orderSummary": "Comanda necesita clarificare: Produs ambiguu", "items": [], "needsClarification": true, "clarificationMessage": "Avem mai multe sucuri: Coca-Cola, Pepsi, Fanta Portocale, Sprite, si Suc de Portocale. Care preferati?"}
+
+### QUANTITY EDGE CASES:
+Input: "zero coca cola"
+Output: {"orderSummary": "Comanda invalida: Cantitate invalida", "items": [], "error": "Cantitatea trebuie sa fie mai mare decat 0."}
+
+Input: "-2 pepsi"
+Output: {"orderSummary": "Comanda invalida: Cantitate invalida", "items": [], "error": "Va rugam sa specificati o cantitate pozitiva."}
+
+Input: "2.7 sticle fanta"
+Output: {"orderSummary": "Comanda invalida: Cantitate invalida", "items": [], "error": "Pentru sticle, va rugam sa specificati un numar intreg."}
+
+Input: "jumatate kg piept pui"
+Output: {"orderSummary": "Comanda dumneavoastra este: 0.5 kg Piept de Pui Dezosat. Confirmati comanda - raspundeti da sau nu.", "items": [{"product": "MEAT-001", "productName": "Piept de Pui Dezosat", "quantity": 0.5, "unit": "kg"}]}
+
+### MIXED LANGUAGE CASES:
+Input: "I want 3 bottles of cola"
+Output: {"orderSummary": "Comanda dumneavoastra este: 3 sticle Coca-Cola. Confirmati comanda - raspundeti da sau nu.", "items": [{"product": "BEV-001", "productName": "Coca-Cola", "quantity": 3, "unit": "sticla"}]}
+
+Input: "Give me 2 kg chicken breast"
+Output: {"orderSummary": "Comanda dumneavoastra este: 2 kg Piept de Pui Dezosat. Confirmati comanda - raspundeti da sau nu.", "items": [{"product": "MEAT-001", "productName": "Piept de Pui Dezosat", "quantity": 2, "unit": "kg"}]}
+
+### TYPO AND COLLOQUIAL CASES:
+Input: "2 cocacola"
+Output: {"orderSummary": "Comanda dumneavoastra este: 2 sticle Coca-Cola. Confirmati comanda - raspundeti da sau nu.", "items": [{"product": "BEV-001", "productName": "Coca-Cola", "quantity": 2, "unit": "sticla"}]}
+
+Input: "bag si eu 3 beri"
+Output: {"orderSummary": "Comanda necesita clarificare: Produs nespecificat", "items": [], "needsClarification": true, "clarificationMessage": "Avem Bere Heineken (6.99 RON) si Bere Ursus (5.49 RON). Care preferati?"}
+
+Input: "vreau cateva mere"
+Output: {"orderSummary": "Comanda necesita clarificare: Cantitate nespecificata", "items": [], "needsClarification": true, "clarificationMessage": "Cati kg de Mere Gala doriti?"}
+
+### COMPLEX MULTI-ITEM CASES:
+Input: "2 cola, 1 kg pui si 3 paine care nu exista"
+Output: {"orderSummary": "Comanda partiala procesata: 2 sticle Coca-Cola si 1 kg Piept de Pui Dezosat.", "items": [{"product": "BEV-001", "productName": "Coca-Cola", "quantity": 2, "unit": "sticla"}, {"product": "MEAT-001", "productName": "Piept de Pui Dezosat", "quantity": 1, "unit": "kg"}], "error": "Produsul 'paine care nu exista' nu este disponibil in catalogul nostru.", "partialOrder": true}
+
+Input: "5 sticle apa plata, 2 kg cartofi si 10 bucati iaurt"
+Output: {"orderSummary": "Comanda dumneavoastra este: 5 sticle Apa Plata Dorna, 2 kg Cartofi Noi si 10 bucati Iaurt Activia. Confirmati comanda - raspundeti da sau nu.", "items": [{"product": "BEV-005", "productName": "Apă Plată Dorna", "quantity": 5, "unit": "sticla"}, {"product": "VEG-001", "productName": "Cartofi Noi", "quantity": 2, "unit": "kg"}, {"product": "LAC-003", "productName": "Iaurt Activia", "quantity": 10, "unit": "bucată"}]}
 
 Be helpful, accurate, and consistent. Always handle edge cases gracefully. Respond only with a single valid JSON object and nothing else. Do not include any explanation, extra text, or additional JSON blocks. Stop generation immediately after the closing brace.`;
 
